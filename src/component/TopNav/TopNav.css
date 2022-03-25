@@ -2,3 +2,10 @@
   list-style-type: none;
   margin-left: 25px;
 }
+.topnav-list ul li:hover {
+  color: #f79837;
+}
+
+.top-nav {
+  background-color: #ebebeb;
+}
