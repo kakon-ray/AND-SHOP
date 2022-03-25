@@ -40,6 +40,10 @@
   border: none;
   box-shadow: none;
 }
+
+.badge {
+  background-color: #f79837;
+}
 @media only screen and (max-width: 600px) {
   .navbar-shop {
     position: absolute;
