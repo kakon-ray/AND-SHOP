@@ -1,0 +1,41 @@
+.navbar .nav-link {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 80px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #243549;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #f79837 !important;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  padding: 20px 0;
+  position: relative;
+}
+
+.navbar-icon:hover {
+  color: #f79837;
+}
+
+.navbar-nav-scroll {
+  /* max-height: var(--bs-scroll-height,75vh); */
+  overflow-y: visible;
+}
+
+/* navbar toggle button display show */
+.navbar-toggler {
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-shop {
+    position: absolute;
+    top: 30px;
+    left: 33%;
+  }
+}
