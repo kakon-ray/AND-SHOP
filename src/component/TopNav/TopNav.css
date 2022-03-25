@@ -9,3 +9,13 @@
 .top-nav {
   background-color: #ebebeb;
 }
+
+.top-nav {
+  font-family: "Poppins", sans-serif;
+}
+
+.readmore {
+  color: #f79837;
+  font-size: 14px;
+  margin-left: 10px;
+}
