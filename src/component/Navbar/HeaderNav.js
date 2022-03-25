@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
-import { Container, NavDropdown, Nav } from "react-bootstrap";
+import {
+  Container,
+  NavDropdown,
+  Nav,
+  Button,
+  Offcanvas,
+} from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -8,8 +14,13 @@ import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./HeaderNav.css";
+import OffCanvas from "../OffCanvas/OffCanvas";
 
 const HeaderNav = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -66,26 +77,44 @@ const HeaderNav = () => {
               </NavDropdown>
             </Nav>
             <div className="navbar-shop text-center">
-              <span className="navbar-icon">
-                <FontAwesomeIcon icon={faHeart} className="mx-3" size="lg" />
-              </span>
-              <span className="navbar-icon">
-                <FontAwesomeIcon
-                  icon={faShoppingBag}
-                  className="mx-3"
-                  size="lg"
-                />
-              </span>
-              <span className="navbar-icon">
-                <FontAwesomeIcon icon={faSearch} className="mx-3" size="lg" />
-              </span>
-              <span className="navbar-icon">
-                <FontAwesomeIcon icon={faBars} className="mx-3" size="lg" />
-              </span>
+              <Button
+                variant=""
+                className="navbar-icon mt-0 pt-0  position-relative"
+              >
+                <FontAwesomeIcon icon={faHeart} size="lg" />
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </Button>
+              <Button
+                variant=""
+                className="navbar-icon mt-0 pt-0  position-relative"
+              >
+                <FontAwesomeIcon icon={faShoppingBag} size="lg" />
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </Button>
+              <Button
+                variant=""
+                className="navbar-icon mt-0 pt-0 "
+                onClick={handleShow}
+              >
+                <FontAwesomeIcon icon={faSearch} size="lg" />
+              </Button>
+              {/* <Button variant="" className="navbar-icon mt-0 pt-0 ">
+                <FontAwesomeIcon icon={faBars} size="lg" />
+              </Button> */}
             </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* this is offcanvas section */}
+
+      <OffCanvas show={show} onHide={handleClose} placement={"start"} />
     </>
   );
 };

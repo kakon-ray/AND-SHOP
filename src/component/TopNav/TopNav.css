@@ -1,6 +1,5 @@
 .topnav-list ul li {
   list-style-type: none;
-  margin: 0px 12px;
 }
 .topnav-list ul li:hover {
   color: #f79837;
@@ -12,6 +11,9 @@
 
 .top-nav {
   font-family: "Poppins", sans-serif;
+}
+.top-nav .btn {
+  background-color: none;
 }
 
 .readmore {
