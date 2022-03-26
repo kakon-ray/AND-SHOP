@@ -1,0 +1,41 @@
+.newcollection {
+  text-transform: uppercase;
+}
+.newcollection .card-body {
+  position: absolute;
+  top: 30%;
+}
+
+.newcollection .card-title {
+  font-size: 22px;
+  color: #f79837;
+  font-weight: 700;
+}
+.newcollection .newCollection {
+  font-size: 22px;
+  color: #f79837;
+  font-weight: 700;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform 0.8s ease;
+  -webkit-transition: transform 0.8s ease;
+  -moz-transition: transform 0.8s ease;
+  -ms-transition: transform 0.8s ease;
+  -o-transition: transform 0.8s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
