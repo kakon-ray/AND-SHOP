@@ -102,39 +102,41 @@ const HeaderNav = () => {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-            </Nav>
-            <div className="navbar-shop text-center">
-              <Button
-                variant=""
-                className="navbar-icon mt-0 pt-0  position-relative"
-              >
-                <FontAwesomeIcon icon={faHeart} size="lg" />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                  99+
-                  <span className="visually-hidden">unread messages</span>
-                </span>
-              </Button>
-              <Button
-                variant=""
-                className="navbar-icon mt-0 pt-0  position-relative"
-              >
-                <FontAwesomeIcon icon={faShoppingBag} size="lg" />
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                  99+
-                  <span className="visually-hidden">unread messages</span>
-                </span>
-              </Button>
-              <Button
-                variant=""
-                className="navbar-icon mt-0 pt-0 "
-                onClick={handleShow}
-              >
-                <FontAwesomeIcon icon={faSearch} size="lg" />
-              </Button>
-              {/* <Button variant="" className="navbar-icon mt-0 pt-0 ">
+              <Nav.Link href="#action1">
+                <div className="navbar-shop">
+                  <Button
+                    variant=""
+                    className="navbar-icon mt-0 pt-0 ms-0 ps-0  position-relative"
+                  >
+                    <FontAwesomeIcon icon={faHeart} size="lg" />
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                      99+
+                      <span className="visually-hidden">unread messages</span>
+                    </span>
+                  </Button>
+                  <Button
+                    variant=""
+                    className="navbar-icon mt-0 pt-0  position-relative"
+                  >
+                    <FontAwesomeIcon icon={faShoppingBag} size="lg" />
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
+                      99+
+                      <span className="visually-hidden">unread messages</span>
+                    </span>
+                  </Button>
+                  <Button
+                    variant=""
+                    className="navbar-icon mt-0 pt-0 "
+                    onClick={handleShow}
+                  >
+                    <FontAwesomeIcon icon={faSearch} size="lg" />
+                  </Button>
+                  {/* <Button variant="" className="navbar-icon mt-0 pt-0 ">
                 <FontAwesomeIcon icon={faBars} size="lg" />
               </Button> */}
-            </div>
+                </div>
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
