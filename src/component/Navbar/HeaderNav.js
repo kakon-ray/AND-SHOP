@@ -22,7 +22,7 @@ const HeaderNav = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <>
+    <div className="and-shop-navbar">
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
@@ -35,15 +35,42 @@ const HeaderNav = () => {
             >
               <Nav.Link href="#action1">Home</Nav.Link>
 
-              <NavDropdown title="SHOP" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">SHOP</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
+              <NavDropdown
+                title="SHOP"
+                id="navbarScrollingDropdown"
+                className="shopContainer"
+              >
+                <div className="row shop">
+                  <div className="col-md-4">
+                    <NavDropdown.Item href="#action3">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    {/* <NavDropdown.Divider /> */}
+                    <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item>
+                  </div>
+                  <div className="col-md-4">
+                    <NavDropdown.Item href="#action3">SHOP</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    {/* <NavDropdown.Divider /> */}
+                    <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item>
+                  </div>
+                  <div className="col-md-4">
+                    <img
+                      src="https://andshop-react.netlify.app/static/media/nav_banner.e87f5849.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
               </NavDropdown>
               <NavDropdown title="FEATURE" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">FEATURE</NavDropdown.Item>
@@ -115,7 +142,7 @@ const HeaderNav = () => {
       {/* this is offcanvas section */}
 
       <OffCanvas show={show} onHide={handleClose} placement={"start"} />
-    </>
+    </div>
   );
 };
 

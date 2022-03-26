@@ -44,6 +44,20 @@
 .badge {
   background-color: #f79837;
 }
+
+/*shop dropdown nav menue style start*/
+
+.shop {
+  min-width: 32em !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 153%;
+  left: 0%;
+}
+
+/*shop dropdown nav menue style start*/
+
 @media only screen and (max-width: 600px) {
   .navbar-shop {
     position: absolute;

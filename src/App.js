@@ -1,13 +1,12 @@
 import "./App.css";
-import TopNav from "./component/TopNav/TopNav";
+
 import "bootstrap/dist/css/bootstrap.min.css";
-import HeaderNav from "./component/Navbar/HeaderNav";
+import HomePage from "./page/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <TopNav />
-      <HeaderNav />
+      <HomePage />
     </div>
   );
 }
