@@ -2,7 +2,7 @@ import React from "react";
 import img1 from "../../assets/Collection/woman1.b58d4262.png";
 import img2 from "../../assets/Collection/woman1.b58d4262.png";
 import img3 from "../../assets/Collection/woman4.6c41e1ce.png";
-import CardsHoverContent from "../Card/CardsHoverContent";
+import CardsHoverContent from "../CardsHoverContent/CardsHoverContent";
 import "./NewCollection.css";
 
 const NewCollection = () => {
