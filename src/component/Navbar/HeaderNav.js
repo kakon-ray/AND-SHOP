@@ -102,7 +102,7 @@ const HeaderNav = () => {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#action1">
+              <Nav.Link>
                 <div className="navbar-shop">
                   <Button
                     variant=""
