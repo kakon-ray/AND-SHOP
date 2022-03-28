@@ -7,7 +7,7 @@ import "./NewCollection.css";
 
 const NewCollection = () => {
   return (
-    <div className="container-fluid newcollection my-3">
+    <div id="newcollection" className="container-fluid my-3">
       <div className="row">
         <div className="col-md-4">
           <CardsHoverContent

@@ -7,6 +7,7 @@ const HeaderBanner = () => {
   return (
     <div
       id="header-banner"
+      className="container-fluid"
       style={{
         backgroundImage: `url(${banner1})`,
         backgroundPosition: "center",
@@ -16,7 +17,7 @@ const HeaderBanner = () => {
     >
       <div className="row">
         <div className="col-md-6">
-          <div id="header-banner-content" className="ms-3">
+          <div className="header-banner-content ms-3">
             <p className="pb-0 mb-0 title">LIVE FOR</p>
             <p className="py-0 my-0 title-two">FASHION</p>
             <p className="ps-2 mt-0 mb-3 save py-2">SAVE UP TO 50%</p>

@@ -22,7 +22,7 @@ const HeaderNav = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="and-shop-navbar">
+    <div id="and-shop-navbar">
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>

@@ -1,0 +1,41 @@
+#shop-card {
+  font-family: "Poppins", sans-serif;
+}
+
+.img-container {
+  position: relative;
+}
+
+.upper-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+
+.upper-image:hover {
+  opacity: 1;
+}
+
+/* this is img zoom in style */
+.img-container {
+  overflow: hidden;
+}
+
+/* style badge */
+
+.badge-container {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  right: auto;
+}
+
+.badge {
+  background-color: #f07a04 !important;
+}

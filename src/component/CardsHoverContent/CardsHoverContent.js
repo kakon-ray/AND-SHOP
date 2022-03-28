@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import "./CardsHoverContent.css";
 
 const CardsHoverContent = ({ img, style, title, collection, collection2 }) => {
   return (
