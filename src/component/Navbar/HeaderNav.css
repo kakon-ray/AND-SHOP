@@ -67,11 +67,7 @@
   margin-bottom: 0;
 }
 
-/* .navbar-shop {
-  position: absolute;
-  top: 30px;
-  left: 35%;
-} */
+/* this media query use toggle navbar section */
 
 @media (max-width: 576px) {
   .navbar-collapse {
