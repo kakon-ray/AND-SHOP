@@ -109,9 +109,8 @@ const HeaderNav = () => {
                     className="navbar-icon mt-0 pt-0 ms-0 ps-0  position-relative"
                   >
                     <FontAwesomeIcon icon={faHeart} size="lg" />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                      99+
-                      <span className="visually-hidden">unread messages</span>
+                    <span className="position-absolute top-7 start-99 translate-middle badge rounded-pill p-1">
+                      10<span className="visually-hidden">unread messages</span>
                     </span>
                   </Button>
                   <Button
@@ -119,9 +118,8 @@ const HeaderNav = () => {
                     className="navbar-icon mt-0 pt-0  position-relative"
                   >
                     <FontAwesomeIcon icon={faShoppingBag} size="lg" />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                      99+
-                      <span className="visually-hidden">unread messages</span>
+                    <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
+                      10<span className="visually-hidden">unread messages</span>
                     </span>
                   </Button>
                   <Button

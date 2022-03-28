@@ -18,7 +18,7 @@
   -o-transition: opacity 1s;
 }
 
-.upper-image:hover {
+.card-container:hover .upper-image {
   opacity: 1;
 }
 
@@ -38,4 +38,22 @@
 
 .badge {
   background-color: #f07a04 !important;
+}
+
+/* img overly content */
+
+.overly-content {
+  opacity: 0;
+  position: absolute;
+  top: 64%;
+  left: 30%;
+  transition: opacity 1s;
+}
+
+.card-container:hover .overly-content {
+  opacity: 1;
+}
+
+.btn-light:hover {
+  color: #f07a04;
 }
