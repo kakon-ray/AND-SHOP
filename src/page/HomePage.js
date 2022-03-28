@@ -4,6 +4,7 @@ import HotProducts from "../component/HotProducts/HotProducts";
 import HeaderNav from "../component/Navbar/HeaderNav";
 import NewCollection from "../component/NewCollection/NewCollection";
 import OffCollection from "../component/OffCollection/OffCollection";
+import SlickCollection from "../component/SlickCollection/SlickCollection";
 import TopNav from "../component/TopNav/TopNav";
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
       <NewCollection />
       <HotProducts />
       <OffCollection />
+      <SlickCollection />
     </>
   );
 };

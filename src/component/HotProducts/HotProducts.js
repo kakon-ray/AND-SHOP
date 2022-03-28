@@ -67,6 +67,20 @@ const HotProducts = () => {
           img={img}
           img1={img1}
         />
+        <ShopCard
+          position="Trending"
+          title="Green Dress For Woman"
+          price="$50.00"
+          img={img}
+          img1={img1}
+        />
+        <ShopCard
+          position="Trending"
+          title="Green Dress For Woman"
+          price="$50.00"
+          img={img}
+          img1={img1}
+        />
       </div>
     </div>
   );
