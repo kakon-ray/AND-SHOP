@@ -12,6 +12,9 @@ const ShopCard = () => {
   return (
     <div className="col-md-3" id="shop-card">
       <Card className="card-container">
+        {/* <div className="heart-container">
+          <SwitchHorizontalIcon className="h-5 w-5 text-light-500 badge my-3" />
+        </div> */}
         <div className="img-container">
           <img src={img} className="img-fluid" />
 
@@ -25,6 +28,7 @@ const ShopCard = () => {
         <span className="badge-container p-0">
           <span class="badge">Trending</span>
         </span>
+
         <div className="overly-container">
           <button className="btn btn-light overly-content-btn">
             Add to Cart

@@ -36,10 +36,6 @@
   right: auto;
 }
 
-.badge {
-  background-color: #f07a04 !important;
-}
-
 /* img overly content */
 
 .overly-content-btn {
@@ -66,4 +62,12 @@
 }
 .btn-light:hover {
   color: #f07a04;
+}
+.overly-content-icon .badge {
+  background-color: aliceblue;
+  color: #f07a04;
+}
+.overly-content-icon .badge:hover {
+  background-color: #f07a04;
+  color: aliceblue;
 }
