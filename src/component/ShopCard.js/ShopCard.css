@@ -53,8 +53,8 @@
 .overly-content-icon {
   opacity: 0;
   position: absolute;
-  top: 20%;
-  left: 80%;
+  top: 10%;
+  left: 76%;
   transition: opacity 1s;
 }
 .card-container:hover .overly-content-icon {
@@ -70,4 +70,11 @@
 .overly-content-icon .badge:hover {
   background-color: #f07a04;
   color: aliceblue;
+}
+#heart {
+  opacity: 1;
+  display: block;
+}
+.overly-content-icon .heart {
+  opacity: 1;
 }
