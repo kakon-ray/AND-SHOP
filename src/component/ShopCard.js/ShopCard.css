@@ -42,7 +42,7 @@
 
 /* img overly content */
 
-.overly-content {
+.overly-content-btn {
   opacity: 0;
   position: absolute;
   top: 64%;
@@ -50,10 +50,20 @@
   transition: opacity 1s;
 }
 
-.card-container:hover .overly-content {
+.card-container:hover .overly-content-btn {
   opacity: 1;
 }
 
+.overly-content-icon {
+  opacity: 0;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transition: opacity 1s;
+}
+.card-container:hover .overly-content-icon {
+  opacity: 1;
+}
 .btn-light:hover {
   color: #f07a04;
 }
