@@ -13,6 +13,7 @@ const NewFashon = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        fontFamily: '"Poppins", sans-serif',
       }}
     >
       <div className="text-center container-fluid w-25 mx-auto py-5">

@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderBanner from "../component/HeaderBanner/HeaderBanner";
 import HotProducts from "../component/HotProducts/HotProducts";
+import LatestBlog from "../component/LatestBlog/LatestBlog";
 import HeaderNav from "../component/Navbar/HeaderNav";
 import NewCollection from "../component/NewCollection/NewCollection";
 import NewFashon from "../component/NewFashon/NewFashon";
@@ -19,6 +20,7 @@ const HomePage = () => {
       <OffCollection />
       <SlickCollection />
       <NewFashon />
+      <LatestBlog />
     </>
   );
 };
