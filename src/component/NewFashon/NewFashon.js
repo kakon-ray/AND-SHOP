@@ -16,7 +16,10 @@ const NewFashon = () => {
         fontFamily: '"Poppins", sans-serif',
       }}
     >
-      <div className="text-center container-fluid w-25 mx-auto py-5">
+      <div
+        className="text-center container-fluid mx-auto py-5"
+        style={{ width: "35%" }}
+      >
         <h6 className="text-warning">TRENDING</h6>
         <h1 className="text-light">New Fashion</h1>
         <p className="text-light">
