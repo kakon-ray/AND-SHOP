@@ -35,8 +35,19 @@ const HeaderNav = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Link to="/" style={{ textDecoration: "none" }}>
-                <p className="nav-link">Home</p>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                className="nav-link"
+              >
+                Home
+              </Link>
+              <Link
+                to="/shop"
+                style={{ textDecoration: "none" }}
+                className="nav-link"
+              >
+                Shop
               </Link>
 
               <NavDropdown
