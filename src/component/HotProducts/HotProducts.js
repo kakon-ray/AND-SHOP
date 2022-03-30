@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ShopCard from "../ShopCard.js/ShopCard";
 import "./HotProducts.css";
 
 import img from "../../assets/Hot/product1.7190443a.png";
 import img1 from "../../assets/Hot/product3.1d2f5e96 (2).png";
 import img2 from "../../assets/Hot/product6.f19b14e6.png";
+import { ShopContext } from "../userContext/ShopContext";
 const HotProducts = () => {
+  // this hook use get data database
+  const [shopItem, setShopItem] = useContext(ShopContext);
+  const [shop, setShop] = useState([]);
+
+  useEffect(() => {
+    setShop(shopItem.slice(0, 8));
+  }, [shopItem]);
+
+  const showMore = () => {
+    let shopLength = shop.length + 4;
+    setShop(shopItem.slice(0, shopLength));
+  };
+
   return (
     <div id="hot-products" className="container-fluid mt-5 py-4">
       <div className="mx-auto text-center">
@@ -25,62 +39,21 @@ const HotProducts = () => {
       </div>
 
       <div className="row g-3">
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img2}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img2}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img1}
-          img1={img2}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img}
-          img1={img1}
-        />
-        <ShopCard
-          position="Trending"
-          title="Green Dress For Woman"
-          price="$50.00"
-          img={img}
-          img1={img1}
-        />
+        {shop.map((item) => (
+          <ShopCard
+            key={item.id}
+            position="Trending"
+            title={item.name}
+            price={item.price}
+            img={item.img}
+            img1={item.img2}
+          />
+        ))}
+      </div>
+      <div className="text-center mt-5">
+        <button className="btn btn-outline-warning" onClick={showMore}>
+          Show More
+        </button>
       </div>
     </div>
   );

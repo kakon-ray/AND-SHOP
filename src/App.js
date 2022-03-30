@@ -6,20 +6,19 @@ import Footer from "./component/Footer/Footer";
 
 import TopNav from "./component/TopNav/TopNav";
 import HeaderNav from "./component/Navbar/HeaderNav";
+import { ShopProvider } from "./component/userContext/ShopContext";
 
 function App() {
   return (
-    <div className="App">
+    <ShopProvider>
       {/* Header section */}
       <TopNav />
       <HeaderNav />
-
       {/* Main Section */}
       <HomePage />
-
       {/* Footer Section */}
       <Footer />
-    </div>
+    </ShopProvider>
   );
 }
 
