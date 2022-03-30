@@ -1,4 +1,5 @@
 import React from "react";
+import FollowUs from "../component/FollowUs/FollowUs";
 import HeaderBanner from "../component/HeaderBanner/HeaderBanner";
 import HotProducts from "../component/HotProducts/HotProducts";
 import LatestBlog from "../component/LatestBlog/LatestBlog";
@@ -21,6 +22,7 @@ const HomePage = () => {
       <SlickCollection />
       <NewFashon />
       <LatestBlog />
+      <FollowUs />
     </>
   );
 };

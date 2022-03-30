@@ -17,10 +17,13 @@ const LatestBlog = () => {
       <div className="row">
         <div className="col-md-4">
           <Card>
-            <Card.Img
-              variant="top"
-              src="https://andshop-react.netlify.app/static/media/post2.81cb9e34.png"
-            />
+            <div className="img-hover-zoom">
+              <Card.Img
+                variant="top"
+                src="https://andshop-react.netlify.app/static/media/post2.81cb9e34.png"
+              />
+            </div>
+
             <Card.Body>
               <h6>24 February 2021</h6>
               <Card.Title>Card Title</Card.Title>
@@ -31,10 +34,13 @@ const LatestBlog = () => {
         </div>
         <div className="col-md-4">
           <Card>
-            <Card.Img
-              variant="top"
-              src="https://andshop-react.netlify.app/static/media/post3.a01f1b65.png"
-            />
+            <div className="img-hover-zoom">
+              <Card.Img
+                variant="top"
+                src="https://andshop-react.netlify.app/static/media/post3.a01f1b65.png"
+              />
+            </div>
+
             <Card.Body>
               <h6>24 February 2021</h6>
               <Card.Title>Card Title</Card.Title>
@@ -45,10 +51,13 @@ const LatestBlog = () => {
         </div>
         <div className="col-md-4">
           <Card>
-            <Card.Img
-              variant="top"
-              src="https://andshop-react.netlify.app/static/media/post1.9424ebbc.png"
-            />
+            <div className="img-hover-zoom">
+              <Card.Img
+                variant="top"
+                src="https://andshop-react.netlify.app/static/media/post1.9424ebbc.png"
+              />
+            </div>
+
             <Card.Body>
               <h6>24 February 2021</h6>
               <Card.Title>Card Title</Card.Title>

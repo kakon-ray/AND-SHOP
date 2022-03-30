@@ -8,11 +8,11 @@ const OffCollection = () => {
       <div className="row">
         <div className="col-md-6">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-9 offcollection-img">
               <img
                 src={img}
                 alt=""
-                className="img-fluid"
+                className="img-fluid rounded"
                 style={{ height: "500px" }}
               />
             </div>
