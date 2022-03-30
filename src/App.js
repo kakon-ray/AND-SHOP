@@ -7,6 +7,7 @@ import Footer from "./component/Footer/Footer";
 import TopNav from "./component/TopNav/TopNav";
 import HeaderNav from "./component/Navbar/HeaderNav";
 import { ShopProvider } from "./component/userContext/ShopContext";
+import ShopPage from "./page/ShopPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <HeaderNav />
       {/* Main Section */}
       <HomePage />
+      <ShopPage />
       {/* Footer Section */}
       <Footer />
     </ShopProvider>
