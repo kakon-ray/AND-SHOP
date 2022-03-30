@@ -12,11 +12,6 @@
   color: #243549;
 }
 
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #f79837 !important;
-}
-
 .navbar {
   background-color: #fef5ef !important;
   padding: 20px 0;
@@ -58,7 +53,7 @@
 }
 
 .dropdown-menu[data-bs-popper] {
-  top: 145%;
+  top: 188%;
   left: 0%;
 }
 

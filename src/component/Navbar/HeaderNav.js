@@ -17,6 +17,7 @@ import "./HeaderNav.css";
 import OffCanvas from "../OffCanvas/OffCanvas";
 
 import { Link } from "react-router-dom";
+import CustomLink from "../CustomLink/CustomLink";
 
 const HeaderNav = () => {
   const [show, setShow] = useState(false);
@@ -35,20 +36,12 @@ const HeaderNav = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Link
-                to="/"
-                style={{ textDecoration: "none" }}
-                className="nav-link"
-              >
+              <CustomLink to="/" className="nav-link">
                 Home
-              </Link>
-              <Link
-                to="/shop"
-                style={{ textDecoration: "none" }}
-                className="nav-link"
-              >
+              </CustomLink>
+              <CustomLink to="/shop" className="nav-link">
                 Shop
-              </Link>
+              </CustomLink>
 
               <NavDropdown
                 title="SHOP"
@@ -88,14 +81,9 @@ const HeaderNav = () => {
                 </div>
               </NavDropdown>
               <NavDropdown title="FEATURE" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">FEATURE</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
+                <CustomLink to="/shop" className="nav-link">
+                  Shop
+                </CustomLink>
               </NavDropdown>
               <NavDropdown title="BLOG" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">BLOG</NavDropdown.Item>
