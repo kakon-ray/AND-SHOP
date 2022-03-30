@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./CardsHoverContent.css";
 
 const CardsHoverContent = ({ img, style, title, collection, collection2 }) => {
@@ -20,7 +21,9 @@ const CardsHoverContent = ({ img, style, title, collection, collection2 }) => {
           {" "}
           <span className="newCollection">{collection}</span> {collection2}
         </Card.Text>
-        <Button variant="outline-info">SHOP NOW</Button>
+        <Link to="/shop">
+          <Button variant="outline-info">SHOP NOW</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

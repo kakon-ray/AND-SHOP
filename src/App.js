@@ -9,6 +9,9 @@ import HeaderNav from "./component/Navbar/HeaderNav";
 import { ShopProvider } from "./component/userContext/ShopContext";
 import ShopPage from "./page/ShopPage";
 
+import { Routes, Route, Link } from "react-router-dom";
+import ErrorPage from "./component/ErrorPage/ErrorPage";
+
 function App() {
   return (
     <ShopProvider>
@@ -16,8 +19,11 @@ function App() {
       <TopNav />
       <HeaderNav />
       {/* Main Section */}
-      <HomePage />
-      <ShopPage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="shop" element={<ShopPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
       {/* Footer Section */}
       <Footer />
     </ShopProvider>

@@ -16,6 +16,8 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./HeaderNav.css";
 import OffCanvas from "../OffCanvas/OffCanvas";
 
+import { Link } from "react-router-dom";
+
 const HeaderNav = () => {
   const [show, setShow] = useState(false);
 
@@ -33,7 +35,9 @@ const HeaderNav = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <p className="nav-link">Home</p>
+              </Link>
 
               <NavDropdown
                 title="SHOP"
