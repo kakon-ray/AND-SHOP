@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./NewFahon.css";
 const NewFashon = () => {
   return (
     <div
@@ -18,7 +18,7 @@ const NewFashon = () => {
     >
       <div
         className="text-center container-fluid mx-auto py-5"
-        style={{ width: "67%", padding: "210px" }}
+        style={{ width: "67%" }}
       >
         <h6 className="text-warning">TRENDING</h6>
         <h1 className="text-light">New Fashion</h1>
