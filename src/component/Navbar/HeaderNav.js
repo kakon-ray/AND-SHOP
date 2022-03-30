@@ -31,7 +31,7 @@ const HeaderNav = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="mx-auto my-2 my-lg-0"
+              className="mx-auto my-2 my-lg-0 d-flex  align-items-center "
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
@@ -117,40 +117,38 @@ const HeaderNav = () => {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link>
-                <div className="navbar-shop">
-                  <Button
-                    variant=""
-                    className="navbar-icon mt-0 pt-0 ms-0 ps-0  position-relative"
-                  >
-                    <FontAwesomeIcon icon={faHeart} size="lg" />
-                    <span className="position-absolute top-7 start-99 translate-middle badge rounded-pill p-1">
-                      10<span className="visually-hidden">unread messages</span>
-                    </span>
-                  </Button>
-                  <Button
-                    variant=""
-                    className="navbar-icon mt-0 pt-0  position-relative"
-                  >
-                    <FontAwesomeIcon icon={faShoppingBag} size="lg" />
-                    <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
-                      10<span className="visually-hidden">unread messages</span>
-                    </span>
-                  </Button>
-                  <Button
-                    variant=""
-                    className="navbar-icon mt-0 pt-0 "
-                    onClick={handleShow}
-                  >
-                    <FontAwesomeIcon icon={faSearch} size="lg" />
-                  </Button>
-                  {/* <Button variant="" className="navbar-icon mt-0 pt-0 ">
-                <FontAwesomeIcon icon={faBars} size="lg" />
-              </Button> */}
-                </div>
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          <div className="navbar-shop d-flex flex-nowrap aligen-item-center mb-0 pb-0">
+            <Button
+              variant=""
+              className="navbar-icon   position-relative  pb-0 "
+            >
+              <FontAwesomeIcon icon={faHeart} size="lg" />
+              <span className="position-absolute top-7 start-99 translate-middle badge rounded-pill p-1">
+                10<span className="visually-hidden">unread messages</span>
+              </span>
+            </Button>
+            <Button
+              variant=""
+              className="navbar-icon  position-relative  pb-0 "
+            >
+              <FontAwesomeIcon icon={faShoppingBag} size="lg" />
+              <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
+                10<span className="visually-hidden">unread messages</span>
+              </span>
+            </Button>
+            <Button
+              variant=""
+              className="navbar-icon pb-0 "
+              onClick={handleShow}
+            >
+              <FontAwesomeIcon icon={faSearch} size="lg" />
+            </Button>
+            {/* <Button variant="" className="navbar-icon mt-0 pt-0 ">
+                <FontAwesomeIcon icon={faBars} size="lg" />
+              </Button> */}
+          </div>
         </Container>
       </Navbar>
 
