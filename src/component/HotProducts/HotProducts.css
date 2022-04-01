@@ -14,6 +14,7 @@
   box-sizing: border-box;
   border-bottom: 3px solid transparent;
 }
+.active,
 .hot-menue:hover {
   color: #f79837;
   cursor: pointer;

@@ -11,6 +11,12 @@ const HotProducts = () => {
   const [shopItem, setShopItem] = useContext(ShopContext);
   const [shop, setShop] = useState([]);
 
+  // hot manu active section
+  const [newArrivalActive, setNewArrivalIsActive] = useState(false);
+  const [trendingActive, setTrendingActive] = useState(false);
+  const [bestSellsActive, setBestSellsActive] = useState(false);
+  const [featuredActive, setFeaturedActive] = useState(false);
+
   useEffect(() => {
     setShop(shopItem.slice(0, 8));
   }, [shopItem]);
@@ -20,6 +26,42 @@ const HotProducts = () => {
     setShop(shopItem.slice(0, shopLength));
   };
 
+  // this is hot manue active section
+  const btnlist = {
+    onsel: "newArrival",
+  };
+  const newArrival = () => {
+    setNewArrivalIsActive(true);
+    setTrendingActive(false);
+    setBestSellsActive(false);
+    setFeaturedActive(false);
+    setShop(shopItem[0]?.newArrival);
+  };
+  const trending = () => {
+    setTrendingActive(true);
+    setNewArrivalIsActive(false);
+    setBestSellsActive(false);
+    setFeaturedActive(false);
+    setShop(shopItem[0]?.FEATURED);
+  };
+  const bestSels = () => {
+    setBestSellsActive(true);
+    setTrendingActive(false);
+    setNewArrivalIsActive(false);
+    setFeaturedActive(false);
+    setShop(shopItem[0]?.SELLERS);
+  };
+
+  const featured = () => {
+    setFeaturedActive(true);
+    setBestSellsActive(false);
+    setTrendingActive(false);
+    setNewArrivalIsActive(false);
+    setShop(shopItem[0]?.newArrival);
+  };
+  btnlist.onsel = () => {
+    console.log("click");
+  };
   return (
     <div id="hot-products" className="container-fluid mt-5 py-4">
       <div className="mx-auto text-center">
@@ -30,11 +72,31 @@ const HotProducts = () => {
       </div>
       <div className="d-flex mb-3 justify-content-center">
         <ul className="d-flex list-unstyled flex-wrap justify-content-center">
-          <li className="hot-menue">NEW ARRIVAL</li>
-          <li className="hot-menue">TRENDING</li>
-          <li className="hot-menue">BEST SELLERS</li>
-          <li className="hot-menue">FEATURED</li>
-          <li className="hot-menue">ON SALL</li>
+          <li
+            className={`hot-menue ${newArrivalActive ? "active" : "hot-menue"}`}
+            value={1}
+            onClick={newArrival}
+          >
+            NEW ARRIVAL
+          </li>
+          <li
+            className={`hot-menue ${trendingActive ? "active" : "hot-menue"}`}
+            onClick={trending}
+          >
+            TRENDING
+          </li>
+          <li
+            className={`hot-menue ${bestSellsActive ? "active" : "hot-menue"}`}
+            onClick={bestSels}
+          >
+            BEST SELLERS
+          </li>
+          <li
+            className={`hot-menue ${featuredActive ? "active" : "hot-menue"}`}
+            onClick={featured}
+          >
+            FEATURED
+          </li>
         </ul>
       </div>
 
