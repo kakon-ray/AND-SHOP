@@ -2,9 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import ShopCard from "../ShopCard.js/ShopCard";
 import "./HotProducts.css";
 
-import img from "../../assets/Hot/product1.7190443a.png";
-import img1 from "../../assets/Hot/product3.1d2f5e96 (2).png";
-import img2 from "../../assets/Hot/product6.f19b14e6.png";
 import { ShopContext } from "../userContext/ShopContext";
 const HotProducts = () => {
   // this hook use get data database
