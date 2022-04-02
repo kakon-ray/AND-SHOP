@@ -60,21 +60,24 @@
 .card-container:hover .overly-content-icon {
   opacity: 1;
 }
-.btn-light:hover {
-  color: #f07a04;
-}
 .overly-content-icon .badge {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   color: #f07a04;
 }
 .overly-content-icon .badge:hover {
   background-color: #f07a04;
+  color: rgb(255, 255, 255);
+}
+.overly-content-icon .badge:hover .icon {
+  background-color: #f07a04;
   color: aliceblue;
 }
-#heart {
-  opacity: 1;
-  display: block;
-}
-.overly-content-icon .heart {
-  opacity: 1;
+.icon-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
