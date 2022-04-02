@@ -8,11 +8,12 @@ import OffCollection from "../component/OffCollection/OffCollection";
 import PageBanner from "../component/PageBanner/PageBanner";
 import ShopCard from "../component/ShopCard.js/ShopCard";
 import SlickCollection from "../component/SlickCollection/SlickCollection";
-import { ShopContext } from "../component/userContext/ShopContext";
+
+import useProducts from "../Hooks/useProducts";
 
 const ShopPage = () => {
-  // this hook use get data database
-  const [shopItem, setShopItem] = useContext(ShopContext);
+  // custom hook use and get data
+  const [shopItem, setShopItem] = useProducts();
   const [shop, setShop] = useState([]);
 
   return (

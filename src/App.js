@@ -6,11 +6,12 @@ import Footer from "./component/Footer/Footer";
 
 import TopNav from "./component/TopNav/TopNav";
 import HeaderNav from "./component/Navbar/HeaderNav";
-import { ShopProvider } from "./component/userContext/ShopContext";
+
 import ShopPage from "./page/ShopPage";
 
 import { Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
+import { ShopProvider } from "./Contexts/CartContext";
 
 function App() {
   return (
