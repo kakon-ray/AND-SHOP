@@ -29,7 +29,7 @@ const HeaderNav = () => {
   const [wishList, setWishList] = useContext(wishListContext);
 
   return (
-    <div id="and-shop-navbar">
+    <>
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <CustomLink to="/" className="navbar-brand">
@@ -120,7 +120,7 @@ const HeaderNav = () => {
               className="navbar-icon   position-relative  pb-0 "
             >
               <FontAwesomeIcon icon={faHeart} size="lg" />
-              <span className="position-absolute top-7 start-99 translate-middle badge rounded-pill p-1">
+              <span className="position-absolute  translate-middle badge rounded-pill p-1">
                 {wishList.length}
                 <span className="visually-hidden">unread messages</span>
               </span>
@@ -151,7 +151,7 @@ const HeaderNav = () => {
       {/* this is offcanvas section */}
 
       <OffCanvas show={show} onHide={handleClose} placement={"start"} />
-    </div>
+    </>
   );
 };
 
