@@ -17,18 +17,18 @@ const OffCollection = () => {
               />
             </div>
             <div className="col-md-3 text-center pt-4 mt-5 ">
-              <ul class="list-group ">
-                <li class="list-group-item">
+              <ul className="list-group ">
+                <li className="list-group-item">
                   <h3 className="font-weight-bold">00</h3> days
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <h3 className="font-weight-bold">00</h3> Hours
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <h3 className="font-weight-bold">00</h3>
                   Minutes
                 </li>
-                <li class="list-group-item">
+                <li className="list-group-item">
                   <h3 className="font-weight-bold">00</h3>
                   Seconds
                 </li>

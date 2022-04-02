@@ -10,6 +10,9 @@ import { SwitchHorizontalIcon } from "@heroicons/react/solid";
 import { HeartIcon } from "@heroicons/react/solid";
 
 const ShopCard = ({ position, title, price, img, img1 }) => {
+  const addTowishList = () => {
+    console.log("click");
+  };
   return (
     <div className="col-md-3" id="shop-card">
       <Card className="card-container">
@@ -24,7 +27,7 @@ const ShopCard = ({ position, title, price, img, img1 }) => {
           <h5>{price}</h5>
         </Card.Body>
         <span className="badge-container p-0">
-          <span class="badge">{position}</span>
+          <span className="badge">{position}</span>
         </span>
 
         <div className="overly-container">
@@ -33,9 +36,11 @@ const ShopCard = ({ position, title, price, img, img1 }) => {
           </button>
           <div className="overly-content-icon">
             <HeartIcon
+              onClick={addTowishList}
               className="h-7 w-7 text-light-500 badge my-3 heart"
               id="heart"
             />
+
             <ViewListIcon className="h-7 w-7 text-light-500 badge my-3" />
             <SwitchHorizontalIcon className="h-7 w-7 text-light-500 badge my-3" />
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./TopNav.css";
+import styles from "./TopNav.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeCompare } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -8,10 +8,14 @@ import { Button } from "react-bootstrap";
 
 const TopNav = () => {
   return (
-    <div className="top-nav">
+    <div className={styles.topnav}>
       <div className="container-fluid">
-        <div className="d-flex justify-content-md-between  align-items-center flex-wrap top-nav-conent">
-          <div className="align-self-center justify-content-center topnav-text">
+        <div
+          className={`d-flex justify-content-md-between  align-items-center flex-wrap ${styles.topNavContent}`}
+        >
+          <div
+            className={`align-self-center justify-content-center ${styles.topnavText}`}
+          >
             <p className="my-0 text-center ">
               Special collection already available
               <span className="readmore">Read More...</span>

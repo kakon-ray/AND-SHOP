@@ -1,29 +1,27 @@
-.topnav-list ul li {
+.topnav ul li {
   list-style-type: none;
 }
-.topnav-list ul li:hover {
+.topnav ul li:hover {
   color: #f79837;
 }
 
-.top-nav {
+.topnav {
   background-color: #ebebeb;
-}
-
-.top-nav {
   font-family: "Poppins", sans-serif;
 }
-.top-nav .btn {
+
+.topnav .btn {
   background-color: none;
 }
 
-.readmore {
+.topnavText {
   color: #f79837;
   font-size: 14px;
   margin-left: 10px;
 }
 
 @media only screen and (max-width: 690px) {
-  .top-nav-conent {
+  .topNavContent {
     justify-content: center !important;
   }
 }

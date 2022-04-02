@@ -11,11 +11,11 @@ import ShopPage from "./page/ShopPage";
 
 import { Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
-import { ShopProvider } from "./Contexts/CartContext";
+import { WishListProvider } from "./Contexts/wishListContext";
 
 function App() {
   return (
-    <ShopProvider>
+    <WishListProvider>
       {/* Header section */}
       <TopNav />
       <HeaderNav />
@@ -27,7 +27,7 @@ function App() {
       </Routes>
       {/* Footer Section */}
       <Footer />
-    </ShopProvider>
+    </WishListProvider>
   );
 }
 
