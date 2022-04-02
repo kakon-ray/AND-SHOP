@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ShopCard from "../ShopCard.js/ShopCard";
 import "./HotProducts.css";
 
-import { ShopContext } from "../userContext/ShopContext";
+import useProducts from "../../Hooks/useProducts";
 const HotProducts = () => {
-  // this hook use get data database
-  const [shopItem, setShopItem] = useContext(ShopContext);
+  // custom hook use and get data
+  const [shopItem, setShopItem] = useProducts();
   const [shop, setShop] = useState([]);
 
   // hot manu active section
