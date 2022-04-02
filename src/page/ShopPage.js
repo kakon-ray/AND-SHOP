@@ -29,6 +29,7 @@ const ShopPage = () => {
               price={item.price}
               img={item.img}
               img1={item.img2}
+              item={item}
             />
           ))}
         </div>

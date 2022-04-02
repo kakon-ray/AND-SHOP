@@ -13,12 +13,20 @@ import { faCodeCompare } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { wishListContext } from "../../Contexts/wishListContext";
+import { toast } from "react-toastify";
 
 const ShopCard = ({ position, title, price, img, img1, item }) => {
   const [wishList, setWishList] = useContext(wishListContext);
 
-  const addTowishList = (item) => {
-    setWishList([...wishList, { item }]);
+  const addTowishList = () => {
+    const exist = wishList.find((wishItem) => wishItem.item?.id === item.id);
+    console.log(exist);
+    if (!exist) {
+      setWishList([...wishList, { item }]);
+      toast.success(" Successfully Added in Wishlist");
+    } else if (exist) {
+      toast.error("Already Added in Wishlist");
+    }
   };
 
   return (
@@ -43,7 +51,7 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
             Add to Cart
           </button>
           <div className="overly-content-icon d-flex flex-column gap-4">
-            <button className=" icon-btn" onClick={() => addTowishList(item)}>
+            <button className=" icon-btn" onClick={addTowishList}>
               <FontAwesomeIcon icon={faHeart} className="badge" size="lg" />
             </button>
             <button className=" icon-btn" onClick={addTowishList}>

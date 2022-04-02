@@ -13,9 +13,14 @@ import { Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
 import { WishListProvider } from "./Contexts/wishListContext";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <WishListProvider>
+      <ToastContainer position="top-center" />
       {/* Header section */}
       <TopNav />
       <HeaderNav />
