@@ -28,7 +28,10 @@ const HeaderNav = () => {
     <div id="and-shop-navbar">
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <CustomLink to="/" className="navbar-brand">
+            Navbar scroll
+          </CustomLink>
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
