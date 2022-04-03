@@ -6,8 +6,11 @@ import Slider from "react-slick";
 
 import "./SlickCollection.css";
 import SlickCollectionItem from "./SlickCollectionItem";
+import useProducts from "../../Hooks/useProducts";
 
 const SlickCollection = () => {
+  const [shopItem, setShopItem] = useProducts();
+
   var settings = {
     dots: true,
     infinite: true,
@@ -15,6 +18,11 @@ const SlickCollection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const todayDell = shopItem.slice(0, 4);
+  const todayDell2 = shopItem.slice(4, 8);
+  const todayDell3 = shopItem.slice(8, 12);
+
   return (
     <div className="container-fluid py-5" id="slick-collection">
       <div className="text-center">
@@ -23,13 +31,13 @@ const SlickCollection = () => {
       </div>
       <Slider {...settings}>
         <div>
-          <SlickCollectionItem />
+          <SlickCollectionItem todayDell={todayDell} />
         </div>
         <div>
-          <SlickCollectionItem />
+          <SlickCollectionItem todayDell={todayDell2} />
         </div>
         <div>
-          <SlickCollectionItem />
+          <SlickCollectionItem todayDell={todayDell3} />
         </div>
       </Slider>
     </div>

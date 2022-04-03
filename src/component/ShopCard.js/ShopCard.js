@@ -33,8 +33,8 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
 
   const addTowCard = () => {
     const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
-    console.log(item);
-    console.log(cartList);
+    // console.log(item);
+    // console.log(cartList);
     if (!exist) {
       setCartList([...cartList, { item }]);
       toast.success(" Successfully Added in Cartlist");
