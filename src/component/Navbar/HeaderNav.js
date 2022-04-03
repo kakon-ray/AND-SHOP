@@ -20,12 +20,26 @@ import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 import { wishListContext } from "../../Contexts/wishListContext";
 import { CartContext } from "../../Contexts/CartContext";
+import CartShow from "../OffCanvas/CartShow";
+import WishListShow from "../OffCanvas/WishListShow";
 
 const HeaderNav = () => {
+  // this hooks use search btn show
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // this hooks use Shoping cart show btn
+  const [showCart, setShowCart] = useState(false);
+
+  const handleClosCart = () => setShowCart(false);
+  const handleShowCart = () => setShowCart(true);
+
+  // this hooks use wishlist show btn
+  const [showWishList, setShowWishList] = useState(false);
+
+  const handleClosWishLIst = () => setShowWishList(false);
+  const handleShowWishList = () => setShowWishList(true);
 
   const [wishList, setWishList] = useContext(wishListContext);
   const [cartList, setCartList] = useContext(CartContext);
@@ -120,6 +134,7 @@ const HeaderNav = () => {
             <Button
               variant=""
               className="navbar-icon   position-relative  pb-0 "
+              onClick={handleShowWishList}
             >
               <FontAwesomeIcon icon={faHeart} size="lg" />
               <span className="position-absolute  translate-middle badge rounded-pill p-1">
@@ -130,6 +145,7 @@ const HeaderNav = () => {
             <Button
               variant=""
               className="navbar-icon  position-relative  pb-0 "
+              onClick={handleShowCart}
             >
               <FontAwesomeIcon icon={faShoppingBag} size="lg" />
               <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
@@ -154,6 +170,17 @@ const HeaderNav = () => {
       {/* this is offcanvas section */}
 
       <OffCanvas show={show} onHide={handleClose} placement={"start"} />
+      <CartShow
+        showCart={showCart}
+        onHideCart={handleClosCart}
+        placement={"start"}
+      />
+      <WishListShow
+        wishList={wishList}
+        showWishList={showWishList}
+        handleClosWishLIst={handleClosWishLIst}
+        placement={"start"}
+      />
     </>
   );
 };
