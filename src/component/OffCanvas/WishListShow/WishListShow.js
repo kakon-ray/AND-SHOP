@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, FormControl, InputGroup, Offcanvas } from "react-bootstrap";
-import "./OffCanvas.css";
 
 const WishListShow = ({
   handleClosWishLIst,

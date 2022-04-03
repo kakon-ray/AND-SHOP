@@ -14,14 +14,14 @@ import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./HeaderNav.css";
-import OffCanvas from "../OffCanvas/OffCanvas";
+import OffCanvas from "../OffCanvas/OffCanvasSearch/OffCanvas";
 
 import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 import { wishListContext } from "../../Contexts/wishListContext";
 import { CartContext } from "../../Contexts/CartContext";
-import CartShow from "../OffCanvas/CartShow";
-import WishListShow from "../OffCanvas/WishListShow";
+import CartShow from "../OffCanvas/CartShow/CartShow";
+import WishListShow from "../OffCanvas/WishListShow/WishListShow";
 
 const HeaderNav = () => {
   // this hooks use search btn show
@@ -173,13 +173,13 @@ const HeaderNav = () => {
       <CartShow
         showCart={showCart}
         onHideCart={handleClosCart}
-        placement={"start"}
+        placement={"end"}
       />
       <WishListShow
         wishList={wishList}
         showWishList={showWishList}
         handleClosWishLIst={handleClosWishLIst}
-        placement={"start"}
+        placement={"end"}
       />
     </>
   );
