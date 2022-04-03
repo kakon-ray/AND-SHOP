@@ -19,6 +19,7 @@ import OffCanvas from "../OffCanvas/OffCanvas";
 import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 import { wishListContext } from "../../Contexts/wishListContext";
+import { CartContext } from "../../Contexts/CartContext";
 
 const HeaderNav = () => {
   const [show, setShow] = useState(false);
@@ -27,6 +28,7 @@ const HeaderNav = () => {
   const handleShow = () => setShow(true);
 
   const [wishList, setWishList] = useContext(wishListContext);
+  const [cartList, setCartList] = useContext(CartContext);
 
   return (
     <>
@@ -131,7 +133,8 @@ const HeaderNav = () => {
             >
               <FontAwesomeIcon icon={faShoppingBag} size="lg" />
               <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
-                10<span className="visually-hidden">unread messages</span>
+                {cartList.length}
+                <span className="visually-hidden">unread messages</span>
               </span>
             </Button>
             <Button

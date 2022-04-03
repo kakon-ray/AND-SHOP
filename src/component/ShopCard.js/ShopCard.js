@@ -14,18 +14,32 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { wishListContext } from "../../Contexts/wishListContext";
 import { toast } from "react-toastify";
+import { CartContext } from "../../Contexts/CartContext";
 
 const ShopCard = ({ position, title, price, img, img1, item }) => {
   const [wishList, setWishList] = useContext(wishListContext);
+  const [cartList, setCartList] = useContext(CartContext);
 
   const addTowishList = () => {
     const exist = wishList.find((wishItem) => wishItem.item?.id === item.id);
-    console.log(exist);
+
     if (!exist) {
       setWishList([...wishList, { item }]);
       toast.success(" Successfully Added in Wishlist");
     } else if (exist) {
       toast.error("Already Added in Wishlist");
+    }
+  };
+
+  const addTowCard = () => {
+    const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
+    console.log(item);
+    console.log(cartList);
+    if (!exist) {
+      setCartList([...cartList, { item }]);
+      toast.success(" Successfully Added in Cartlist");
+    } else if (exist) {
+      toast.error("Already Added in Cartlist");
     }
   };
 
@@ -47,22 +61,26 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
         </span>
 
         <div className="overly-container">
-          <button className="btn btn-light overly-content-btn">
+          <button
+            className="btn btn-light overly-content-btn"
+            onClick={addTowCard}
+          >
             Add to Cart
           </button>
           <div className="overly-content-icon d-flex flex-column gap-4">
             <button className=" icon-btn" onClick={addTowishList}>
               <FontAwesomeIcon icon={faHeart} className="badge" size="lg" />
             </button>
-            <button className=" icon-btn" onClick={addTowishList}>
+
+            <button className=" icon-btn">
+              <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
+            </button>
+            <button className=" icon-btn">
               <FontAwesomeIcon
                 icon={faCodeCompare}
                 className="badge"
                 size="lg"
               />
-            </button>
-            <button className=" icon-btn" onClick={addTowishList}>
-              <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
             </button>
 
             {/* <ViewListIcon className="h-7 w-7 text-light-500 badge my-3" />

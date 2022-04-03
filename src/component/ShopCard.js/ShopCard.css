@@ -36,6 +36,14 @@
   right: auto;
 }
 
+.badge {
+  background-color: #f79837;
+  font-size: 14px;
+  font-weight: 400;
+  top: 28% !important;
+  padding: 5px 8px;
+}
+
 /* img overly icon show content */
 
 .overly-content-btn {
@@ -80,4 +88,8 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+.overly-content-btn:hover {
+  color: #f07a04;
 }

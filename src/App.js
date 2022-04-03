@@ -16,23 +16,26 @@ import { WishListProvider } from "./Contexts/wishListContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { CartListProvider } from "./Contexts/CartContext";
 
 function App() {
   return (
-    <WishListProvider>
-      <ToastContainer position="top-center" />
-      {/* Header section */}
-      <TopNav />
-      <HeaderNav />
-      {/* Main Section */}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="shop" element={<ShopPage />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      {/* Footer Section */}
-      <Footer />
-    </WishListProvider>
+    <CartListProvider>
+      <WishListProvider>
+        <ToastContainer position="top-center" />
+        {/* Header section */}
+        <TopNav />
+        <HeaderNav />
+        {/* Main Section */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="shop" element={<ShopPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        {/* Footer Section */}
+        <Footer />
+      </WishListProvider>
+    </CartListProvider>
   );
 }
 

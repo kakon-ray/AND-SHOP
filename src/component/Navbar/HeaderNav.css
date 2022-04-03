@@ -40,11 +40,17 @@
   box-shadow: none;
 }
 
-.badge {
+.navbar-shop .badge {
   background-color: #f79837;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
   top: 28% !important;
+  padding: 5px 6px !important;
+  border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -ms-border-radius: 100% !important;
+  -o-border-radius: 100% !important;
 }
 
 /*shop dropdown nav menue style start*/
