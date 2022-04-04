@@ -46,7 +46,7 @@ const HeaderNav = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" className="sticky-top">
         <Container fluid>
           <Link to="/" className="navbar-brand">
             Navbar scroll

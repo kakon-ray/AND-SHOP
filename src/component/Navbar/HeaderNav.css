@@ -69,6 +69,12 @@
   margin-bottom: 0;
 }
 
+/* navbar customize */
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 /* this media query use toggle navbar section */
 
 @media (max-width: 576px) {
