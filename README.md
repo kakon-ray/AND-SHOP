@@ -18,4 +18,8 @@
 
 > ## Used Costom hooks
 
+> ## Used Font Awesome and Hero Icon
+
+> ## Used React slick-carousel
+
 # Live Link: [And It](https://and-shop-react-kakon.netlify.app/).

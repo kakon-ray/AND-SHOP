@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useContext } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import "./ShopCard.css";
 
@@ -68,20 +68,46 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
             Add to Cart
           </button>
           <div className="overly-content-icon d-flex flex-column gap-4">
-            <button className=" icon-btn" onClick={addTowishList}>
-              <FontAwesomeIcon icon={faHeart} className="badge" size="lg" />
-            </button>
+            {["top"].map((placement) => (
+              <OverlayTrigger
+                key={placement}
+                overlay={
+                  <Tooltip id={`tooltip-${placement}`}>Wish List</Tooltip>
+                }
+              >
+                <button className=" icon-btn" onClick={addTowishList}>
+                  <FontAwesomeIcon icon={faHeart} className="badge" size="lg" />
+                </button>
+              </OverlayTrigger>
+            ))}
 
-            <button className=" icon-btn">
-              <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
-            </button>
-            <button className=" icon-btn">
-              <FontAwesomeIcon
-                icon={faCodeCompare}
-                className="badge"
-                size="lg"
-              />
-            </button>
+            {["top"].map((placement) => (
+              <OverlayTrigger
+                key={placement}
+                overlay={
+                  <Tooltip id={`tooltip-${placement}`}>Quick View</Tooltip>
+                }
+              >
+                <button className=" icon-btn">
+                  <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
+                </button>
+              </OverlayTrigger>
+            ))}
+
+            {["top"].map((placement) => (
+              <OverlayTrigger
+                key={placement}
+                overlay={<Tooltip id={`tooltip-${placement}`}>Compare</Tooltip>}
+              >
+                <button className=" icon-btn">
+                  <FontAwesomeIcon
+                    icon={faCodeCompare}
+                    className="badge"
+                    size="lg"
+                  />
+                </button>
+              </OverlayTrigger>
+            ))}
 
             {/* <ViewListIcon className="h-7 w-7 text-light-500 badge my-3" />
             <SwitchHorizontalIcon className="h-7 w-7 text-light-500 badge my-3" /> */}
