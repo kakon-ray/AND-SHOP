@@ -138,7 +138,7 @@ const HeaderNav = () => {
             >
               <FontAwesomeIcon icon={faHeart} size="lg" />
               <span className="position-absolute  translate-middle badge rounded-pill p-1">
-                {wishList.length}
+                {wishList.length - 1}
                 <span className="visually-hidden">unread messages</span>
               </span>
             </Button>
@@ -149,7 +149,7 @@ const HeaderNav = () => {
             >
               <FontAwesomeIcon icon={faShoppingBag} size="lg" />
               <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
-                {cartList.length}
+                {cartList.length - 1}
                 <span className="visually-hidden">unread messages</span>
               </span>
             </Button>

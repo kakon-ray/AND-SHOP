@@ -7,7 +7,7 @@ const WishListShow = ({
   showWishList,
   wishList,
 }) => {
-  console.log(wishList);
+  // console.log(wishList);
   return (
     <Offcanvas
       show={showWishList}
