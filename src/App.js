@@ -17,23 +17,26 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CartListProvider } from "./Contexts/CartContext";
+import { CompareListProvider } from "./Contexts/CompareContext";
 
 function App() {
   return (
     <CartListProvider>
       <WishListProvider>
-        <ToastContainer position="top-center" />
-        {/* Header section */}
-        <TopNav />
-        <HeaderNav />
-        {/* Main Section */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="shop" element={<ShopPage />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        {/* Footer Section */}
-        <Footer />
+        <CompareListProvider>
+          <ToastContainer position="top-center" />
+          {/* Header section */}
+          <TopNav />
+          <HeaderNav />
+          {/* Main Section */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="shop" element={<ShopPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+          {/* Footer Section */}
+          <Footer />
+        </CompareListProvider>
       </WishListProvider>
     </CartListProvider>
   );

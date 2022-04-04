@@ -15,10 +15,12 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { wishListContext } from "../../Contexts/wishListContext";
 import { toast } from "react-toastify";
 import { CartContext } from "../../Contexts/CartContext";
+import { CompareContext } from "../../Contexts/CompareContext";
 
 const ShopCard = ({ position, title, price, img, img1, item }) => {
   const [wishList, setWishList] = useContext(wishListContext);
   const [cartList, setCartList] = useContext(CartContext);
+  const [compareList, setCompareList] = useContext(CompareContext);
 
   const addTowishList = () => {
     const exist = wishList.find((wishItem) => wishItem.item?.id === item.id);
@@ -40,6 +42,21 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
       toast.success(" Successfully Added in Cartlist");
     } else if (exist) {
       toast.error("Already Added in Cartlist");
+    }
+  };
+
+  const addToCompareList = () => {
+    const exist = compareList.find(
+      (compareItem) => compareItem.item?.id === item.id
+    );
+    // console.log(item);
+    // console.log(cartList);
+
+    if (!exist) {
+      setCompareList([...compareList, { item }]);
+      toast.success(" Added in Compare List");
+    } else if (exist) {
+      toast.error("Already Added in Compare List");
     }
   };
 
@@ -99,7 +116,7 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
                 key={placement}
                 overlay={<Tooltip id={`tooltip-${placement}`}>Compare</Tooltip>}
               >
-                <button className=" icon-btn">
+                <button className=" icon-btn" onClick={addToCompareList}>
                   <FontAwesomeIcon
                     icon={faCodeCompare}
                     className="badge"
