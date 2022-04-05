@@ -19,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { CartListProvider } from "./Contexts/CartContext";
 import { CompareListProvider } from "./Contexts/CompareContext";
 import CompareList from "./component/CompareList/CompareList";
+import CartPage from "./page/CartPage/CartPage";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="shop" element={<ShopPage />} />
             <Route path="compare" element={<CompareList />} />
+            <Route path="cart" element={<CartPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           {/* Footer Section */}

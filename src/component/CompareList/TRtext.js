@@ -1,19 +1,36 @@
 import React from "react";
+import StarRatings from "react-star-ratings/build/star-ratings";
 
-const TRtext = ({ title, text1, text2 }) => {
+const TRtext = ({ text }) => {
   return (
-    <tr>
-      <td>
-        <h4 className="py-3 text-center">{title}</h4>
-      </td>
-      <td>
-        <p className="py-3 text-center">{text1}</p>
-      </td>
-      <td>
-        <p className="py-3 text-center">{text2}</p>
-      </td>
-    </tr>
+    <td>
+      <p className="py-3 text-center">{text}</p>
+    </td>
+  );
+};
+const TrPrice = ({ price }) => {
+  return (
+    <td>
+      <div className="py-3 text-center">
+        <h5>{price}</h5>
+      </div>
+    </td>
+  );
+};
+const StrRating = ({ ratingNum }) => {
+  return (
+    <td>
+      <div className="py-3 text-center">
+        <StarRatings
+          className="py-3 "
+          rating={ratingNum}
+          starDimension="20px"
+          starSpacing="15px"
+          starRatedColor="#f79837"
+        />
+      </div>
+    </td>
   );
 };
 
-export default TRtext;
+export { TRtext, TrPrice, StrRating };

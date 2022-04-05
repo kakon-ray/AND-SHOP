@@ -1,0 +1,16 @@
+td,
+th {
+  border: 1px solid #959393;
+  text-align: center;
+  padding: 8px;
+}
+
+#table-tr-bg {
+  background-color: #f79837 !important;
+  border-bottom: none;
+  color: #fff;
+  border: none;
+}
+.cart-page table {
+  border-collapse: unset;
+}
