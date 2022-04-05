@@ -19,7 +19,7 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
   return (
     <Offcanvas show={showCart} onHide={onHideCart} placement={placement}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="text-center mx-auto">
+        <Offcanvas.Title className="text-center mx-auto textwarning">
           AND SHOP
         </Offcanvas.Title>
       </Offcanvas.Header>
@@ -34,6 +34,11 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
           ) : (
             ""
           )
+        )}
+        {cartList.length <= 1 ? (
+          <h6 className="text-center">No Item in the Cart List</h6>
+        ) : (
+          ""
         )}
       </Offcanvas.Body>
     </Offcanvas>

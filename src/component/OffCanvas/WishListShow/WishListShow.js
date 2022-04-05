@@ -22,7 +22,7 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
       placement={placement}
     >
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title className="text-center mx-auto">
+        <Offcanvas.Title className="text-center mx-auto textwarning">
           AND SHOP
         </Offcanvas.Title>
       </Offcanvas.Header>
@@ -37,6 +37,12 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
           ) : (
             ""
           )
+        )}
+
+        {wishList.length <= 1 ? (
+          <h6 className="text-center">No Item in the Wish List</h6>
+        ) : (
+          ""
         )}
       </Offcanvas.Body>
     </Offcanvas>
