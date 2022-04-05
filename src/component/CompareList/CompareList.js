@@ -187,7 +187,7 @@ const CompareList = () => {
           </tbody>
         </Table>
       ) : (
-        <h1 className="text-center">No Item Add Compare List</h1>
+        <h1 className="text-center">No Item in The Compare List</h1>
       )}
     </div>
   );

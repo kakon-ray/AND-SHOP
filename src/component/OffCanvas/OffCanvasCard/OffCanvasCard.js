@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import "./OffCanvasCard.css";
 
 const OffCanvasCard = ({ item, removeItem }) => {
   return (
@@ -17,10 +19,16 @@ const OffCanvasCard = ({ item, removeItem }) => {
             style={{ width: "50px", height: "50px", border: "none" }}
           />
         </div>
-        <div>
-          <h6>{item.item.name}</h6>
-          <p>Price: {item.item.price}</p>
-        </div>
+        <Link
+          to="/cart"
+          style={{ textDecoration: "none", color: "gray" }}
+          className="linkstyle"
+        >
+          <div>
+            <h6>{item.item.name}</h6>
+            <p>Price: {item.item.price}</p>
+          </div>
+        </Link>
       </div>
       {/* <Button variant="" className="navbar-icon pb-0 "></Button> */}
       <FontAwesomeIcon
