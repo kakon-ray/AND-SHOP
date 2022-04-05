@@ -28,6 +28,13 @@ const CompareList = () => {
       toast.error("Already Added in Cartlist");
     }
   };
+
+  const removeCompareList = (id) => {
+    const newCompareList = compareList.filter(
+      (comItem) => comItem?.item?.id !== id
+    );
+    setCompareList(newCompareList);
+  };
   console.log(compareList[1]?.item?.name);
   return (
     <div className="my-5 py-5">
@@ -36,17 +43,17 @@ const CompareList = () => {
           <tbody>
             <TRcard
               title=" Product"
-              card1Img={compareList[1].item?.img}
-              card2Img={compareList[2].item?.img}
-              card1P={compareList[1].item?.price}
-              card2P={compareList[2].item?.price}
-              card1H4={compareList[1].item?.name}
-              card2H4={compareList[2].item?.name}
+              card1Img={compareList[1]?.item?.img}
+              card2Img={compareList[2]?.item?.img}
+              card1P={compareList[1]?.item?.price}
+              card2P={compareList[2]?.item?.price}
+              card1H4={compareList[1]?.item?.name}
+              card2H4={compareList[2]?.item?.name}
             />
             <TRtext
               title="Description"
-              text1={compareList[0].item?.text}
-              text2={compareList[1].item?.text}
+              text1={compareList[0]?.item?.text}
+              text2={compareList[1]?.item?.text}
             />
 
             <tr>
@@ -59,13 +66,13 @@ const CompareList = () => {
               <td>
                 <div className="py-3 text-center">
                   {" "}
-                  <h5>1000$</h5>
+                  <h5>{compareList[1]?.item?.price}</h5>
                 </div>
               </td>
               <td>
                 <div className="py-3 text-center">
                   {" "}
-                  <h5>1000$</h5>
+                  <h5>{compareList[2]?.item?.price}</h5>
                 </div>
               </td>
             </tr>
@@ -75,24 +82,32 @@ const CompareList = () => {
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <StarRatings
-                    className="py-3 "
-                    rating={2.5}
-                    starDimension="20px"
-                    starSpacing="15px"
-                    starRatedColor="#f79837"
-                  />
+                  {compareList[1] ? (
+                    <StarRatings
+                      className="py-3 "
+                      rating={2.5}
+                      starDimension="20px"
+                      starSpacing="15px"
+                      starRatedColor="#f79837"
+                    />
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <StarRatings
-                    className="py-3"
-                    rating={2.5}
-                    starDimension="20px"
-                    starSpacing="15px"
-                    starRatedColor="#f79837"
-                  />
+                  {compareList[2] ? (
+                    <StarRatings
+                      className="py-3"
+                      rating={2.5}
+                      starDimension="20px"
+                      starSpacing="15px"
+                      starRatedColor="#f79837"
+                    />
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
             </tr>
@@ -102,34 +117,42 @@ const CompareList = () => {
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <Button
-                    variant="dark"
-                    onClick={() => addTowCard(compareList[1].item)}
-                  >
-                    {" "}
-                    Add to Car
-                    <FontAwesomeIcon
-                      icon={faShoppingCart}
-                      size="sm"
-                      className="ms-1"
-                    />
-                  </Button>
+                  {compareList[1] ? (
+                    <Button
+                      variant="dark"
+                      onClick={() => addTowCard(compareList[1].item)}
+                    >
+                      {" "}
+                      Add to Car
+                      <FontAwesomeIcon
+                        icon={faShoppingCart}
+                        size="sm"
+                        className="ms-1"
+                      />
+                    </Button>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <Button
-                    variant="dark"
-                    onClick={() => addTowCard(compareList[2].item)}
-                  >
-                    {" "}
-                    Add to Cart
-                    <FontAwesomeIcon
-                      icon={faShoppingCart}
-                      size="sm"
-                      className="ms-1"
-                    />
-                  </Button>
+                  {compareList[2] ? (
+                    <Button
+                      variant="dark"
+                      onClick={() => addTowCard(compareList[2].item)}
+                    >
+                      {" "}
+                      Add to Cart
+                      <FontAwesomeIcon
+                        icon={faShoppingCart}
+                        size="sm"
+                        className="ms-1"
+                      />
+                    </Button>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
             </tr>
@@ -139,12 +162,28 @@ const CompareList = () => {
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <FontAwesomeIcon icon={faTrash} size="lg" />
+                  {compareList[1] ? (
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      size="lg"
+                      onClick={() => removeCompareList(compareList[1].item.id)}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
               <td>
                 <div className="py-3 text-center">
-                  <FontAwesomeIcon icon={faTrash} size="lg" />
+                  {compareList[2] ? (
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      size="lg"
+                      onClick={() => removeCompareList(compareList[2].item.id)}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
             </tr>
