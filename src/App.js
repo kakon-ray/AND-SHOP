@@ -1,13 +1,13 @@
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import HomePage from "./page/HomePage";
+import HomePage from "./page/HomePage/HomePage";
 import Footer from "./component/Footer/Footer";
 
 import TopNav from "./component/TopNav/TopNav";
 import HeaderNav from "./component/Navbar/HeaderNav";
 
-import ShopPage from "./page/ShopPage";
+import ShopPage from "./page/ShopPage/ShopPage";
 
 import { Routes, Route, Link } from "react-router-dom";
 import ErrorPage from "./component/ErrorPage/ErrorPage";

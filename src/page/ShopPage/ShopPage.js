@@ -1,15 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import FollowUs from "../component/FollowUs/FollowUs";
-import HotProducts from "../component/HotProducts/HotProducts";
-import LatestBlog from "../component/LatestBlog/LatestBlog";
-import HeaderNav from "../component/Navbar/HeaderNav";
-import NewFashon from "../component/NewFashon/NewFashon";
-import OffCollection from "../component/OffCollection/OffCollection";
-import PageBanner from "../component/PageBanner/PageBanner";
-import ShopCard from "../component/ShopCard.js/ShopCard";
-import SlickCollection from "../component/SlickCollection/SlickCollection";
-
-import useProducts from "../Hooks/useProducts";
+import FollowUs from "../../component/FollowUs/FollowUs";
+import PageBanner from "../../component/PageBanner/PageBanner";
+import ShopCard from "../../component/ShopCard.js/ShopCard";
+import useProducts from "../../Hooks/useProducts";
 
 const ShopPage = () => {
   // custom hook use and get data
