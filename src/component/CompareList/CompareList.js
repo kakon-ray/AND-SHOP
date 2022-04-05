@@ -35,7 +35,7 @@ const CompareList = () => {
     );
     setCompareList(newCompareList);
   };
-  console.log(compareList[1]?.item?.name);
+  // console.log(compareList[1]?.item?.name);
   return (
     <div className="my-5 py-5">
       {compareList.length > 1 ? (
@@ -52,10 +52,10 @@ const CompareList = () => {
             />
             <TRtext
               title="Description"
-              text1={compareList[0]?.item?.text}
-              text2={compareList[1]?.item?.text}
+              text1={compareList[1]?.item?.text}
+              text2={compareList[2]?.item?.text}
             />
-
+            {console.log(compareList[2])}
             <tr>
               <td>
                 <div className="py-3 text-center">
