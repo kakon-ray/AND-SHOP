@@ -3,7 +3,7 @@ import React, { useState, createContext, useEffect } from "react";
 export const CompareContext = createContext();
 
 export const CompareListProvider = (props) => {
-  const [cartList, setCartList] = useState([
+  const [compareList, setCompareList] = useState([
     {
       id: "1",
       name: "Green Dress For Woman",
@@ -14,7 +14,7 @@ export const CompareListProvider = (props) => {
   ]);
 
   return (
-    <CompareContext.Provider value={[cartList, setCartList]}>
+    <CompareContext.Provider value={[compareList, setCompareList]}>
       {props.children}
     </CompareContext.Provider>
   );

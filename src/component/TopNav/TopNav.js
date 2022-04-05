@@ -6,6 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
+import { Link } from "react-router-dom";
 const TopNav = () => {
   return (
     <div className={styles.topnav}>
@@ -24,10 +25,12 @@ const TopNav = () => {
           <div className="topnav-list">
             <ul className="d-flex flex-wrap align-self-center my-0 ps-0">
               <li>
-                <Button variant="" className="me-2">
-                  <FontAwesomeIcon icon={faCodeCompare} className="me-1" />
-                  Compare
-                </Button>
+                <Link to="/compare">
+                  <Button variant="" className="me-2">
+                    <FontAwesomeIcon icon={faCodeCompare} className="me-1" />
+                    Compare
+                  </Button>
+                </Link>
               </li>
               <li>
                 <Button variant="" className="me-2">
