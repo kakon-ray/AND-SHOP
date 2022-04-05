@@ -23,6 +23,7 @@ const CompareList = () => {
     if (!exist) {
       console.log(item);
       setCartList([...cartList, { item }]);
+      toast.success(" Added in Cartlist");
     } else if (exist) {
       toast.error("Already Added in Cartlist");
     }

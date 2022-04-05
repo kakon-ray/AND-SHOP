@@ -58,7 +58,7 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
     } else if (exist) {
       toast.error("Already Added in Compare List");
     } else {
-      toast.error("Do not add more then two item ");
+      toast.error("Do not add more then two item in Compare list");
     }
   };
 
