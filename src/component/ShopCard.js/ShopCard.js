@@ -52,13 +52,13 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
     // console.log(item);
     // console.log(cartList);
 
-    if (!exist && compareList.length < 3) {
+    if (!exist && compareList.length < 4) {
       setCompareList([...compareList, { item }]);
       toast.success(" Added in Compare List");
     } else if (exist) {
       toast.error("Already Added in Compare List");
     } else {
-      toast.error("Do not add more then two item in Compare list");
+      toast.error("Do not add more then 4 item ");
     }
   };
 
