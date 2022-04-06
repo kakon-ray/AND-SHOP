@@ -20,6 +20,7 @@ import { CartListProvider } from "./Contexts/CartContext";
 import { CompareListProvider } from "./Contexts/CompareContext";
 import CompareList from "./component/CompareList/CompareList";
 import CartPage from "./page/CartPage/CartPage";
+import ComparePage from "./page/ComparePage/ComparePage";
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="shop" element={<ShopPage />} />
-            <Route path="compare" element={<CompareList />} />
+            <Route path="compare" element={<ComparePage />} />
             <Route path="cart" element={<CartPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
