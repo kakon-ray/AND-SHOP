@@ -14,3 +14,7 @@ th {
 .cart-page table {
   border-collapse: unset;
 }
+
+.table-responsive {
+  overflow-x: auto;
+}

@@ -37,12 +37,13 @@ const CompareList = () => {
       <div className="row mx-1">
         {compareList.length > 0 ? (
           compareList.map((item) => (
-            <CompareCard
-              key={item?.item?.id}
-              item={item}
-              addTowCard={addTowCard}
-              removeCompareList={removeCompareList}
-            />
+            <React.Fragment key={item?.item?.id}>
+              <CompareCard
+                item={item}
+                addTowCard={addTowCard}
+                removeCompareList={removeCompareList}
+              />
+            </React.Fragment>
           ))
         ) : (
           <h1 className="text-center">No Item add to Compare List</h1>
