@@ -3,8 +3,8 @@ import { Card, Button } from "react-bootstrap";
 const ComparePage = () => {
   return (
     <div className="container-fluid">
-      <div className="row my-4">
-        <div className="col-md-6">
+      <div className="row my-4 mx-1">
+        <div className="col-md-6 px-0 mx-0">
           <Card>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
@@ -17,7 +17,7 @@ const ComparePage = () => {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 px-0 mx-0">
           <Card>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
