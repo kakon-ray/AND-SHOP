@@ -22,4 +22,4 @@
 
 > ## Used React slick-carousel
 
-# Live Link: [And It](https://and-shop-react-kakon.netlify.app/).
+<!-- # Live Link: [And It](https://and-shop-react-kakon.netlify.app/). -->
