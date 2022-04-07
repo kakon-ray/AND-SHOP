@@ -11,7 +11,12 @@ const CompareCard = ({ item, addTowCard, removeCompareList }) => {
     <div className="col-md-6 px-0 mx-0">
       {item?.item ? (
         <Card className="text-center">
-          <Card.Img variant="top" src={item.item.img} />
+          <Card.Img
+            variant="top"
+            style={{ height: "600px" }}
+            className="img-fluid"
+            src={item.item.img}
+          />
           <Card.Body>
             <Card.Title>{item.item.name}</Card.Title>
 
@@ -25,30 +30,35 @@ const CompareCard = ({ item, addTowCard, removeCompareList }) => {
                 starRatedColor="#f79837"
               />
             </div>
-            <div>
+            <div
+              style={{ height: "100px", overflow: "auto" }}
+              className="d-flex align-items-center"
+            >
               <p>{item.item.text}</p>
             </div>
 
-            <Button variant="dark" onClick={() => addTowCard(item.item)}>
-              {" "}
-              Add to Cart
-              <FontAwesomeIcon
-                icon={faShoppingCart}
-                size="sm"
-                className="ms-1"
-              />
-            </Button>
-
-            <span className="ms-2">
-              <Button
-                variant="dark"
-                onClick={() => removeCompareList(item.item.id)}
-              >
+            <div className="my-3">
+              <Button variant="dark" onClick={() => addTowCard(item.item)}>
                 {" "}
-                Remove Cart
-                <FontAwesomeIcon icon={faTrash} size="sm" className="ms-1" />
+                Add to Cart
+                <FontAwesomeIcon
+                  icon={faShoppingCart}
+                  size="sm"
+                  className="ms-1"
+                />
               </Button>
-            </span>
+
+              <span className="ms-2 my-2">
+                <Button
+                  variant="dark"
+                  onClick={() => removeCompareList(item.item.id)}
+                >
+                  {" "}
+                  Remove Cart
+                  <FontAwesomeIcon icon={faTrash} size="sm" className="ms-1" />
+                </Button>
+              </span>
+            </div>
           </Card.Body>
         </Card>
       ) : (

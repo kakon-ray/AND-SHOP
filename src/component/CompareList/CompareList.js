@@ -33,7 +33,7 @@ const CompareList = () => {
   };
 
   return (
-    <div className="my-5 py-5 container-fluid">
+    <div className="my-4 container-fluid">
       <div className="row mx-1">
         {compareList.length > 0 ? (
           compareList.map((item) => (
