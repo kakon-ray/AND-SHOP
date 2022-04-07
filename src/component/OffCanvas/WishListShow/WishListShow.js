@@ -1,5 +1,12 @@
 import React, { useContext } from "react";
-import { Button, FormControl, InputGroup, Offcanvas } from "react-bootstrap";
+import {
+  Button,
+  FormControl,
+  InputGroup,
+  Offcanvas,
+  OffcanvasBody,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { wishListContext } from "../../../Contexts/wishListContext";
 
 import OffCanvasCard from "../OffCanvasCard/OffCanvasCard";
@@ -41,6 +48,16 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
 
         {wishList.length <= 1 ? (
           <h6 className="text-center">No Item in the Wish List</h6>
+        ) : (
+          ""
+        )}
+
+        {wishList.length > 1 ? (
+          <Link to="/wishlistpage">
+            <div className="text-center">
+              <Button variant="outline-warning">View Wishlist</Button>
+            </div>
+          </Link>
         ) : (
           ""
         )}
