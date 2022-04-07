@@ -46,7 +46,7 @@ const CompareList = () => {
             </React.Fragment>
           ))
         ) : (
-          <h1 className="text-center">No Item add to Compare List</h1>
+          <h1 className="text-center my-5 py-5">No Item add to Compare List</h1>
         )}
       </div>
     </div>
