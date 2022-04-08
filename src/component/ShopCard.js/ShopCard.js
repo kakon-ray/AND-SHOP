@@ -16,6 +16,7 @@ import { wishListContext } from "../../Contexts/wishListContext";
 import { toast } from "react-toastify";
 import { CartContext } from "../../Contexts/CartContext";
 import { CompareContext } from "../../Contexts/CompareContext";
+import { Link } from "react-router-dom";
 
 const ShopCard = ({ position, title, price, img, img1, item }) => {
   const [wishList, setWishList] = useContext(wishListContext);
@@ -107,9 +108,11 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
                   <Tooltip id={`tooltip-${placement}`}>Quick View</Tooltip>
                 }
               >
-                <button className=" icon-btn">
-                  <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
-                </button>
+                <Link to={`${item.id}`}>
+                  <button className=" icon-btn">
+                    <FontAwesomeIcon icon={faEye} className="badge" size="lg" />
+                  </button>
+                </Link>
               </OverlayTrigger>
             ))}
 

@@ -21,7 +21,7 @@ const OffCanvasCard = ({ item, removeItem }) => {
           />
         </div>
         <Link
-          to="/cart"
+          to={`${item.item.id}`}
           style={{ textDecoration: "none", color: "gray" }}
           className="linkstyle"
         >

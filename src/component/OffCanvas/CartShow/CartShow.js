@@ -5,6 +5,7 @@ import { CartContext } from "../../../Contexts/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import OffCanvasCard from "../OffCanvasCard/OffCanvasCard";
+import { Link } from "react-router-dom";
 
 const CartShow = ({ onHideCart, placement, showCart }) => {
   const [cartList, setCartList] = useContext(CartContext);
@@ -34,6 +35,15 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
           ) : (
             ""
           )
+        )}
+        {cartList.length > 1 ? (
+          <Link to="/cart">
+            <div className="text-center">
+              <Button variant="outline-warning">View Cart</Button>
+            </div>
+          </Link>
+        ) : (
+          ""
         )}
         {cartList.length <= 1 ? (
           <h6 className="text-center">No Item in the Cart List</h6>

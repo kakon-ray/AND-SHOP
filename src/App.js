@@ -21,6 +21,7 @@ import { CompareListProvider } from "./Contexts/CompareContext";
 import CompareList from "./component/CompareList/CompareList";
 import CartPage from "./page/CartPage/CartPage";
 import WishListPage from "./page/WishListPage/WishListPage";
+import ProductDetails from "./component/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="compare" element={<CompareList />} />
             <Route path="cart" element={<CartPage />} />
             <Route path="wishlistpage" element={<WishListPage />} />
+            <Route path="/:id" element={<ProductDetails />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           {/* Footer Section */}
