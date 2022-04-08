@@ -14,6 +14,8 @@ import { CartContext } from "../../Contexts/CartContext";
 import { CompareContext } from "../../Contexts/CompareContext";
 import useProducts from "../../Hooks/useProducts";
 import { toast } from "react-toastify";
+import useAddWishList from "../../Hooks/useAddWishList";
+import useAddCompareList from "../../Hooks/useAddCompareList";
 
 const ProductDetails = () => {
   const [shopItem, setShopItem] = useProducts([]);
@@ -25,30 +27,20 @@ const ProductDetails = () => {
 
   const productDetailsitem = shopItem.filter((item) => item.id === id);
   const item = productDetailsitem[0];
-  const addTowishList = () => {
-    const exist = wishList.find(
-      (wishItem) => wishItem.item?.id === productDetailsitem[0].id
-    );
-    if (!exist) {
-      setWishList([...wishList, { item }]);
-      toast.success(" Successfully Added in Wishlist");
-    } else if (exist) {
-      toast.error("Already Added in Wishlist");
-    }
-    console.log(wishList, productDetailsitem[0]);
-  };
-  const addToCompareList = () => {
-    const exist = compareList.find(
-      (compareItem) => compareItem.item?.id === productDetailsitem[0]?.id
-    );
 
-    if (!exist && compareList.length < 4) {
-      setCompareList([...compareList, { item }]);
-      toast.success(" Added in Compare List");
+  // use custome hook add wishlist addcomparelist and addtocart
+  const { addTowishList } = useAddWishList(item, productDetailsitem);
+  const { addToCompareList } = useAddCompareList(item, productDetailsitem);
+
+  const addTowCard = () => {
+    const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
+    // console.log(item);
+    // console.log(cartList);
+    if (!exist) {
+      setCartList([...cartList, { item }]);
+      toast.success(" Successfully Added in Cartlist");
     } else if (exist) {
-      toast.error("Already Added in Compare List");
-    } else {
-      toast.error("Do not add more then 4 item ");
+      toast.error("Already Added in Cartlist");
     }
   };
 
@@ -132,7 +124,7 @@ const ProductDetails = () => {
                         </p>
                       </div>
                       <div className="my-2">
-                        <Button variant="dark">
+                        <Button variant="dark" onClick={addTowCard}>
                           {" "}
                           Add to Cart
                           <FontAwesomeIcon
