@@ -36,7 +36,7 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
             ""
           )
         )}
-        {cartList.length > 1 ? (
+        {cartList.length > 0 ? (
           <Link to="/cart">
             <div className="text-center">
               <Button variant="outline-warning">View Cart</Button>
@@ -45,7 +45,7 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
         ) : (
           ""
         )}
-        {cartList.length <= 1 ? (
+        {cartList.length <= 0 ? (
           <h6 className="text-center">No Item in the Cart List</h6>
         ) : (
           ""

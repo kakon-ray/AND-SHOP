@@ -46,13 +46,13 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
           )
         )}
 
-        {wishList.length <= 1 ? (
+        {wishList.length <= 0 ? (
           <h6 className="text-center">No Item in the Wish List</h6>
         ) : (
           ""
         )}
 
-        {wishList.length > 1 ? (
+        {wishList.length > 0 ? (
           <Link to="/wishlistpage">
             <div className="text-center">
               <Button variant="outline-warning">View Wishlist</Button>

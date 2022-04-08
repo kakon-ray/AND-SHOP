@@ -9,20 +9,13 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faCodeCompare } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
-import { wishListContext } from "../../Contexts/wishListContext";
-import { CartContext } from "../../Contexts/CartContext";
-import { CompareContext } from "../../Contexts/CompareContext";
 import useProducts from "../../Hooks/useProducts";
-import { toast } from "react-toastify";
 import useAddWishList from "../../Hooks/useAddWishList";
 import useAddCompareList from "../../Hooks/useAddCompareList";
 import useAddCart from "../../Hooks/useAddCart";
 
 const ProductDetails = () => {
   const [shopItem, setShopItem] = useProducts([]);
-  const [wishList, setWishList] = useContext(wishListContext);
-  const [cartList, setCartList] = useContext(CartContext);
-  const [compareList, setCompareList] = useContext(CompareContext);
 
   let { id } = useParams();
 
@@ -33,17 +26,6 @@ const ProductDetails = () => {
   const { addTowishList } = useAddWishList(item, productDetailsitem);
   const { addToCompareList } = useAddCompareList(item, productDetailsitem);
   const { addTowCard } = useAddCart(item);
-
-  // const addTowCard = () => {
-  //   const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
-
-  //   if (!exist) {
-  //     setCartList([...cartList, { item }]);
-  //     toast.success(" Successfully Added in Cartlist");
-  //   } else if (exist) {
-  //     toast.error("Already Added in Cartlist");
-  //   }
-  // };
 
   return (
     <>
