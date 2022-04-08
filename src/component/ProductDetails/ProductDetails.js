@@ -24,18 +24,31 @@ const ProductDetails = () => {
   let { id } = useParams();
 
   const productDetailsitem = shopItem.filter((item) => item.id === id);
-
+  const item = productDetailsitem[0];
   const addTowishList = () => {
-    const item = productDetailsitem[0];
-
     const exist = wishList.find(
-      (wishItem) => wishItem?.id === productDetailsitem.id
+      (wishItem) => wishItem.item?.id === productDetailsitem[0].id
     );
     if (!exist) {
       setWishList([...wishList, { item }]);
       toast.success(" Successfully Added in Wishlist");
     } else if (exist) {
       toast.error("Already Added in Wishlist");
+    }
+    console.log(wishList, productDetailsitem[0]);
+  };
+  const addToCompareList = () => {
+    const exist = compareList.find(
+      (compareItem) => compareItem.item?.id === productDetailsitem[0]?.id
+    );
+
+    if (!exist && compareList.length < 4) {
+      setCompareList([...compareList, { item }]);
+      toast.success(" Added in Compare List");
+    } else if (exist) {
+      toast.error("Already Added in Compare List");
+    } else {
+      toast.error("Do not add more then 4 item ");
     }
   };
 
@@ -109,13 +122,13 @@ const ProductDetails = () => {
                             <FontAwesomeIcon icon={faHeart} size="sm" />
                             Add To Wishlist
                           </span>
-                          {/* <span
+                          <span
                             className="ms-4 product-details-wishlistz"
                             onClick={addToCompareList}
                           >
                             <FontAwesomeIcon icon={faCodeCompare} size="sm" />
                             Add To Comparelist
-                          </span> */}
+                          </span>
                         </p>
                       </div>
                       <div className="my-2">
