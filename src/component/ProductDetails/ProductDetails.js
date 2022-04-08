@@ -16,6 +16,7 @@ import useProducts from "../../Hooks/useProducts";
 import { toast } from "react-toastify";
 import useAddWishList from "../../Hooks/useAddWishList";
 import useAddCompareList from "../../Hooks/useAddCompareList";
+import useAddCart from "../../Hooks/useAddCart";
 
 const ProductDetails = () => {
   const [shopItem, setShopItem] = useProducts([]);
@@ -31,18 +32,18 @@ const ProductDetails = () => {
   // use custome hook add wishlist addcomparelist and addtocart
   const { addTowishList } = useAddWishList(item, productDetailsitem);
   const { addToCompareList } = useAddCompareList(item, productDetailsitem);
+  const { addTowCard } = useAddCart(item);
 
-  const addTowCard = () => {
-    const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
-    // console.log(item);
-    // console.log(cartList);
-    if (!exist) {
-      setCartList([...cartList, { item }]);
-      toast.success(" Successfully Added in Cartlist");
-    } else if (exist) {
-      toast.error("Already Added in Cartlist");
-    }
-  };
+  // const addTowCard = () => {
+  //   const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
+
+  //   if (!exist) {
+  //     setCartList([...cartList, { item }]);
+  //     toast.success(" Successfully Added in Cartlist");
+  //   } else if (exist) {
+  //     toast.error("Already Added in Cartlist");
+  //   }
+  // };
 
   return (
     <>
