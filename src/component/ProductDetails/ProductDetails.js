@@ -23,15 +23,16 @@ const ProductDetails = () => {
 
   let { id } = useParams();
 
-  const productDetailsItem = shopItem.filter((item) => item.id == id);
+  const productDetailsitem = shopItem.filter((item) => item.id === id);
 
   const addTowishList = () => {
-    const exist = wishList.find(
-      (wishItem) => wishItem?.id === productDetailsItem[0].id
-    );
+    const item = productDetailsitem[0];
 
+    const exist = wishList.find(
+      (wishItem) => wishItem?.id === productDetailsitem.id
+    );
     if (!exist) {
-      setWishList([...wishList, productDetailsItem[0]]);
+      setWishList([...wishList, { item }]);
       toast.success(" Successfully Added in Wishlist");
     } else if (exist) {
       toast.error("Already Added in Wishlist");
@@ -40,23 +41,23 @@ const ProductDetails = () => {
 
   return (
     <>
-      <PageBanner />
+      <PageBanner page="Product Details" />
       <div id="product-details" className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            {productDetailsItem[0] && (
+            {productDetailsitem[0] && (
               <Card>
                 <div className="row">
                   <div className="col-md-5">
                     <img
-                      src={productDetailsItem[0].img}
+                      src={productDetailsitem[0].img}
                       alt=""
                       className="img-fluid"
                     />
                   </div>
                   <div className="col-md-7 ">
                     <div className="mt-3">
-                      <h2>{productDetailsItem[0].name}</h2>
+                      <h2>{productDetailsitem[0].name}</h2>
                       <div className="d-flex aligen-items-center">
                         <StarRatings
                           className="py-3 "
@@ -71,7 +72,7 @@ const ProductDetails = () => {
                       </div>
                       <div className="my-3">
                         <h2>
-                          {productDetailsItem[0].price}{" "}
+                          {productDetailsitem[0].price}{" "}
                           <del style={{ color: "#f79837", marginLeft: "40px" }}>
                             $60.00
                           </del>
@@ -79,7 +80,7 @@ const ProductDetails = () => {
                       </div>
                       <div>
                         <p className="text-secondary">
-                          {productDetailsItem[0].text}
+                          {productDetailsitem[0].text}
                         </p>
                       </div>
                       <div>
@@ -108,10 +109,13 @@ const ProductDetails = () => {
                             <FontAwesomeIcon icon={faHeart} size="sm" />
                             Add To Wishlist
                           </span>
-                          <span className="ms-4 product-details-wishlistz">
+                          {/* <span
+                            className="ms-4 product-details-wishlistz"
+                            onClick={addToCompareList}
+                          >
                             <FontAwesomeIcon icon={faCodeCompare} size="sm" />
                             Add To Comparelist
-                          </span>
+                          </span> */}
                         </p>
                       </div>
                       <div className="my-2">

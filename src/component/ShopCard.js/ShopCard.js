@@ -48,10 +48,8 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
 
   const addToCompareList = () => {
     const exist = compareList.find(
-      (compareItem) => compareItem.item?.id === item.id
+      (compareItem) => compareItem?.id === item.id
     );
-    // console.log(item);
-    // console.log(cartList);
 
     if (!exist && compareList.length < 4) {
       setCompareList([...compareList, { item }]);

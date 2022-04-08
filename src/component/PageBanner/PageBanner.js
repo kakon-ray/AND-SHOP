@@ -11,8 +11,8 @@ export default function PageBanner({ page }) {
     marginTop: ".2%",
   };
   const pageStyle = {
-    left: "45%",
-    top: "50%",
+    left: "42%",
+    top: "45%",
   };
   return (
     <div style={myStyle} className="position-relative mb-5">
