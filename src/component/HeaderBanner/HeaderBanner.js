@@ -21,9 +21,7 @@ const HeaderBanner = () => {
             <p className="pb-0 mb-0 title">LIVE FOR</p>
             <p className="py-0 my-0 title-two">FASHION</p>
             <p className="ps-2 mt-0 mb-3 save py-2">SAVE UP TO 50%</p>
-            <button className="btn btn-outline-light py-2 ms-2">
-              Shop Now
-            </button>
+            <button className="btn btn-dark py-2 px-4 ms-2">Shop Now</button>
           </div>
         </div>
         <div className="col-md-6">

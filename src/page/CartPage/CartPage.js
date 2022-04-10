@@ -3,9 +3,12 @@ import "./CartPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../Contexts/CartContext";
+import { Card, Button } from "react-bootstrap";
+import PageBanner from "../../component/PageBanner/PageBanner";
 
 const CartPage = () => {
   const [value, setValue] = useState("");
+  const [noCartList, setNotCartList] = useState("");
   const [cartList, setCartList] = useContext(CartContext);
 
   const total = 5;
@@ -24,71 +27,144 @@ const CartPage = () => {
   };
 
   return (
-    <div className="my-5 container-fluid cart-page">
-      <div className="row table-responsive">
-        <table className="table">
-          <thead>
-            <tr id="table-tr-bg">
-              <th scope="col">Remove</th>
-              <th scope="col">Image</th>
-              <th scope="col">Product</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quality</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
+    <>
+      <PageBanner page="Cart" />
+      <div className="my-5 container-fluid cart-page" id="card-page">
+        <div className="row table-responsive">
+          <table className="table">
+            <thead>
+              <tr id="table-tr-bg">
+                <th scope="col">Remove</th>
+                <th scope="col">Image</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quality</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
 
-          <tbody className="text-center text-justify">
-            {cartList.map(
-              (item) =>
-                item.item && (
-                  <React.Fragment key={item?.item?.id}>
-                    <tr key={item.item.id}>
-                      <th scope="row">
-                        <FontAwesomeIcon
-                          icon={faTrash}
-                          size="lg"
-                          className="text-danger pt-4"
-                          onClick={() => removeItem(item.item.id)}
-                        />
-                      </th>
+            <tbody className="text-center text-justify">
+              {cartList.map(
+                (item) =>
+                  item.item && (
+                    <React.Fragment key={item?.item?.id}>
+                      <tr key={item.item.id}>
+                        <th scope="row">
+                          <FontAwesomeIcon
+                            icon={faTrash}
+                            size="lg"
+                            className="text-danger pt-4"
+                            onClick={() => removeItem(item.item.id)}
+                          />
+                        </th>
 
-                      <td>
-                        <img
-                          src={item.item.img}
-                          alt=""
-                          style={{ width: "80px", height: "80px" }}
-                        />
-                      </td>
-                      <td>
-                        <p className="mt-4">{item.item.name}</p>
-                      </td>
-                      <td>
-                        <p className="mt-4">{item.item.price}</p>
-                      </td>
-                      <td>
-                        <input
-                          className="mt-4"
-                          id="number"
-                          type="number"
-                          placeholder="1"
-                          style={{ width: "50px" }}
-                          onChange={(e) =>
-                            handleChangeSinglePost(e.target.value, item.item.id)
-                          }
-                        ></input>
-                      </td>
-                      <td>
-                        <p className="mt-4">{total}</p>
-                      </td>
-                    </tr>
-                  </React.Fragment>
-                )
-            )}
-          </tbody>
-        </table>
+                        <td>
+                          <img
+                            src={item.item.img}
+                            alt=""
+                            style={{ width: "80px", height: "80px" }}
+                          />
+                        </td>
+                        <td>
+                          <p className="mt-4">{item.item.name}</p>
+                        </td>
+                        <td>
+                          <p className="mt-4">{item.item.price}</p>
+                        </td>
+                        <td>
+                          <input
+                            className="mt-4"
+                            id="number"
+                            type="number"
+                            defaultValue={1}
+                            style={{ width: "50px" }}
+                            onChange={(e) =>
+                              handleChangeSinglePost(
+                                e.target.value,
+                                item.item.id
+                              )
+                            }
+                          ></input>
+                        </td>
+                        <td>
+                          <p className="mt-4">{total}</p>
+                        </td>
+                      </tr>
+                    </React.Fragment>
+                  )
+              )}
+            </tbody>
+          </table>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <Card>
+              <Card.Body style={{ margin: "0", padding: "0" }}>
+                <Card.Title
+                  style={{
+                    backgroundColor: "#f79837",
+                    color: "#fff",
+                    padding: "10px",
+                    width: "100%",
+                  }}
+                >
+                  COUPON
+                </Card.Title>
+
+                <div style={{ padding: "15px" }} className="cupon">
+                  <p className="text-secondary ">
+                    Enter your coupon code if you have one.
+                  </p>
+                  <input
+                    className="mb-2"
+                    placeholder="Coupon code"
+                    type="text"
+                  />
+                  <Button variant="dark pb-2 pt-2">APPLY TO CUPON</Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-md-6">
+            <Card>
+              <Card.Body style={{ margin: "0", padding: "0" }}>
+                <Card.Title
+                  style={{
+                    backgroundColor: "#f79837",
+                    color: "#fff",
+                    padding: "10px",
+                    width: "100%",
+                  }}
+                >
+                  CART TOTAL
+                </Card.Title>
+                <div style={{ padding: "15px" }} className="text-secondary">
+                  <div className="d-flex justify-content-between py-2">
+                    <span>Subtotal</span>
+                    <span>$107.00</span>
+                  </div>
+                  <div className="d-flex justify-content-between py-2">
+                    <span>Shipping</span>
+                    <span>$00.00</span>
+                  </div>
+                  <p className="text-end py-2">Calculate shipping</p>
+                  <hr />
+                  <div className="d-flex justify-content-between py-2">
+                    <span>Total</span>
+                    <span>$107.00</span>
+                  </div>
+                  <div className="d-flex justify-fontent-end py-2">
+                    <Button variant="dark pb-2 pt-1 ms-auto">
+                      PROCEED TO CHECKOUT
+                    </Button>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

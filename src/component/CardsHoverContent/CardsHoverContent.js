@@ -22,7 +22,7 @@ const CardsHoverContent = ({ img, style, title, collection, collection2 }) => {
           <span className="newCollection">{collection}</span> {collection2}
         </Card.Text>
         <Link to="/shop">
-          <Button variant="outline-info">SHOP NOW</Button>
+          <Button variant="dark">SHOP NOW</Button>
         </Link>
       </Card.Body>
     </Card>

@@ -10,13 +10,13 @@
   margin-right: auto;
   background-color: #f8f9fa;
   border: 2px solid #000000;
-  border-radius: 50px;
+  border-radius: 45px;
   box-shadow: none !important;
   font-size: 20px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
 }
 .formControlOffcanvas:focus {
   border: 2px solid #f79837;
