@@ -5,10 +5,9 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../Contexts/CartContext";
 import { Card, Button } from "react-bootstrap";
 import PageBanner from "../../component/PageBanner/PageBanner";
+import Table from "react-bootstrap/col";
 
 const CartPage = () => {
-  const [value, setValue] = useState("");
-  const [noCartList, setNotCartList] = useState("");
   const [cartList, setCartList] = useContext(CartContext);
 
   const total = 5;
@@ -28,7 +27,7 @@ const CartPage = () => {
 
   return (
     <>
-      <PageBanner page="Cart" />
+      <PageBanner page="Cart" positionleft="46%" />
       <div className="my-5 container-fluid cart-page" id="card-page">
         <div className="row table-responsive">
           <table className="table">
@@ -42,7 +41,6 @@ const CartPage = () => {
                 <th scope="col">Total</th>
               </tr>
             </thead>
-
             <tbody className="text-center text-justify">
               {cartList.map(
                 (item) =>
@@ -95,6 +93,11 @@ const CartPage = () => {
               )}
             </tbody>
           </table>
+          {cartList.length <= 0 && (
+            <p style={{ fontSize: "30px" }} className="text-center py-5">
+              No item Cartlist
+            </p>
+          )}
         </div>
         <div className="row">
           <div className="col-md-6">
@@ -154,7 +157,7 @@ const CartPage = () => {
                     <span>$107.00</span>
                   </div>
                   <div className="d-flex justify-fontent-end py-2">
-                    <Button variant="dark pb-2 pt-1 ms-auto">
+                    <Button variant="dark pb-2 pt-2 ms-auto">
                       PROCEED TO CHECKOUT
                     </Button>
                   </div>
