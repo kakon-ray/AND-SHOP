@@ -1,6 +1,7 @@
 import React from "react";
+import "./PageBanner.css";
 
-export default function PageBanner({ page, positionleft }) {
+export default function PageBanner({ page }) {
   const myStyle = {
     backgroundImage:
       "url('https://andshop-react.netlify.app/static/media/common_bg.7b040441.png')",
@@ -10,17 +11,14 @@ export default function PageBanner({ page, positionleft }) {
     backgroundRepeat: "no-repeat",
     marginTop: ".2%",
   };
-  const pageStyle = {
-    left: `${positionleft ? positionleft : "44%"}`,
-    top: "45%",
-  };
 
   return (
-    <div style={myStyle} className="position-relative mb-5">
-      <div className="position-absolute page text-light" style={pageStyle}>
-        {" "}
-        <h1>{page}</h1>
-      </div>
+    <div
+      style={myStyle}
+      className="position-relative mb-5 d-flex justify-content-center align-items-center"
+    >
+      <h1 style={{ color: "#fff" }}>{page}</h1>
+      <div className="position-absolute page text-light pageStyle"> </div>
     </div>
   );
 }

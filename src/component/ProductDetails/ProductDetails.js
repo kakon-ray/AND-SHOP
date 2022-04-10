@@ -44,7 +44,7 @@ const ProductDetails = () => {
                     />
                   </div>
                   <div className="col-md-7 ">
-                    <div className="mt-3">
+                    <div className="mt-3 p-3">
                       <h2>{productDetailsitem[0].name}</h2>
                       <div className="d-flex aligen-items-center">
                         <StarRatings

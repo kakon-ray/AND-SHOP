@@ -27,7 +27,7 @@ const CartPage = () => {
 
   return (
     <>
-      <PageBanner page="Cart" positionleft="46%" />
+      <PageBanner page="Cart" />
       <div className="my-5 container-fluid cart-page" id="card-page">
         <div className="row table-responsive">
           <table className="table">

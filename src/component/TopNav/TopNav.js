@@ -26,23 +26,32 @@ const TopNav = () => {
             <ul className="d-flex flex-wrap align-self-center my-0 ps-0">
               <li>
                 <Link to="/compare">
-                  <Button variant="" className="me-2">
+                  <button
+                    className="mx-3 my-2 top-btn"
+                    style={{ padding: "0", border: "none", background: "none" }}
+                  >
                     <FontAwesomeIcon icon={faCodeCompare} className="me-1" />
-                    Compare
-                  </Button>
+                    compare
+                  </button>
                 </Link>
               </li>
               <li>
-                <Button variant="" className="me-2">
+                <button
+                  className="mx-3 my-2 "
+                  style={{ padding: "0", border: "none", background: "none" }}
+                >
                   <FontAwesomeIcon icon={faUser} className="me-1" />
                   Login
-                </Button>
+                </button>
               </li>
               <li>
-                <Button variant="" className="me-2">
+                <button
+                  className="mx-3 my-2 "
+                  style={{ padding: "0", border: "none", background: "none" }}
+                >
                   <FontAwesomeIcon icon={faLock} className="me-1" />
                   Register
-                </Button>
+                </button>
               </li>
             </ul>
           </div>

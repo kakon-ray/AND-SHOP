@@ -19,7 +19,7 @@ const OffCanvas = ({ onHide, placement, show }) => {
             aria-describedby="basic-addon2"
           />
           <Button
-            variant="outline-secondary"
+            variant="outline-secondary ps-1"
             id="button-addon2 "
             className={style.offcanvaSearchBtn}
           >

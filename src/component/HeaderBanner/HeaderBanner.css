@@ -25,3 +25,9 @@
   font-weight: bold;
   color: aliceblue;
 }
+
+@media only screen and (max-width: 768px) {
+  .header-banner-text {
+    margin-left: 8px;
+  }
+}
