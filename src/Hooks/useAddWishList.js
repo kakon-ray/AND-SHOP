@@ -14,7 +14,6 @@ const useAddWishList = (item, productDetailsitem) => {
     } else if (exist) {
       toast.error("Already Added in Wishlist");
     }
-    console.log(wishList, productDetailsitem[0]);
   };
   return { addTowishList };
 };
