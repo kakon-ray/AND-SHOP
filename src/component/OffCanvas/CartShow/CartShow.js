@@ -12,9 +12,9 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
 
   const removeItem = (id) => {
     const removeThenCartItem = cartList.filter(
-      (listItem) => listItem?.item?.id !== id
+      (listItem) => listItem?.id !== id
     );
-    setCartList(removeThenCartItem);
+    setCartList([...removeThenCartItem]);
     // console.log(removeThenCartItem);
   };
   return (
@@ -26,12 +26,8 @@ const CartShow = ({ onHideCart, placement, showCart }) => {
       </Offcanvas.Header>
       <Offcanvas.Body>
         {cartList.map((item) =>
-          item.item ? (
-            <OffCanvasCard
-              item={item}
-              removeItem={removeItem}
-              key={item.item.id}
-            />
+          item ? (
+            <OffCanvasCard item={item} removeItem={removeItem} key={item.id} />
           ) : (
             ""
           )

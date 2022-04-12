@@ -9,11 +9,21 @@ const useAddCompareList = (item, productDetailsitem) => {
 
   const addToCompareList = () => {
     const exist = compareList.find(
-      (compareItem) => compareItem.item?.id === productDetailsitem[0]?.id
+      (compareItem) => compareItem?.id === productDetailsitem[0]?.id
     );
 
     if (!exist && compareList.length < 4) {
-      setCompareList([...compareList, { item }]);
+      setCompareList([
+        ...compareList,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          text: item.text,
+          img: item.img,
+          img2: item.img2,
+        },
+      ]);
       toast.success(" Added in Compare List");
     } else if (exist) {
       toast.error("Already Added in Compare List");

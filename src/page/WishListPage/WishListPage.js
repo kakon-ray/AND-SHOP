@@ -14,9 +14,9 @@ const WishListPage = () => {
 
   const removeItem = (id) => {
     const removeThenCartItem = wishList.filter(
-      (listItem) => listItem?.item?.id !== id
+      (listItem) => listItem?.id !== id
     );
-    setWishList(removeThenCartItem);
+    setWishList([...removeThenCartItem]);
     // console.log(removeThenCartItem);
   };
 
@@ -43,30 +43,30 @@ const WishListPage = () => {
             <tbody className="text-center text-justify">
               {wishList.map(
                 (item) =>
-                  item.item && (
-                    <React.Fragment key={item?.item?.id}>
-                      <tr key={item.item.id}>
+                  item && (
+                    <React.Fragment key={item?.id}>
+                      <tr key={item.id}>
                         <th scope="row">
                           <FontAwesomeIcon
                             icon={faTrash}
                             size="lg"
                             className="text-danger pt-4"
-                            onClick={() => removeItem(item.item.id)}
+                            onClick={() => removeItem(item.id)}
                           />
                         </th>
 
                         <td>
                           <img
-                            src={item.item.img}
+                            src={item.img}
                             alt=""
                             style={{ width: "80px", height: "80px" }}
                           />
                         </td>
                         <td>
-                          <p className="mt-4">{item.item.name}</p>
+                          <p className="mt-4">{item.name}</p>
                         </td>
                         <td>
-                          <p className="mt-4">{item.item.price}</p>
+                          <p className="mt-4">{item.price}</p>
                         </td>
                       </tr>
                     </React.Fragment>

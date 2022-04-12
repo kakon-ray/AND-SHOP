@@ -24,10 +24,20 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
   const [compareList, setCompareList] = useContext(CompareContext);
 
   const addTowishList = () => {
-    const exist = wishList.find((wishItem) => wishItem.item?.id === item.id);
+    const exist = wishList.find((wishItem) => wishItem?.id === item.id);
 
     if (!exist) {
-      setWishList([...wishList, { item }]);
+      setWishList([
+        ...wishList,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          text: item.text,
+          img: item.img,
+          img2: item.img2,
+        },
+      ]);
       toast.success(" Successfully Added in Wishlist");
     } else if (exist) {
       toast.error("Already Added in Wishlist");
@@ -35,11 +45,21 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
   };
 
   const addTowCard = () => {
-    const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
+    const exist = cartList.find((wishItem) => wishItem?.id === item.id);
     // console.log(item);
     // console.log(cartList);
     if (!exist) {
-      setCartList([...cartList, { item }]);
+      setCartList([
+        ...cartList,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          text: item.text,
+          img: item.img,
+          img2: item.img2,
+        },
+      ]);
       toast.success(" Successfully Added in Cartlist");
     } else if (exist) {
       toast.error("Already Added in Cartlist");
@@ -52,7 +72,17 @@ const ShopCard = ({ position, title, price, img, img1, item }) => {
     );
 
     if (!exist && compareList.length < 4) {
-      setCompareList([...compareList, { item }]);
+      setCompareList([
+        ...compareList,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          text: item.text,
+          img: item.img,
+          img2: item.img2,
+        },
+      ]);
       toast.success(" Added in Compare List");
     } else if (exist) {
       toast.error("Already Added in Compare List");

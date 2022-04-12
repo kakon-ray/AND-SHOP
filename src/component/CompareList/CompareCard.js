@@ -9,18 +9,18 @@ import StarRatings from "react-star-ratings/build/star-ratings";
 const CompareCard = ({ item, addTowCard, removeCompareList }) => {
   return (
     <div className="col-md-6 px-0 mx-0">
-      {item?.item ? (
+      {item ? (
         <Card className="text-center">
           <Card.Img
             variant="top"
             style={{ height: "600px" }}
             className="img-fluid"
-            src={item.item.img}
+            src={item.img}
           />
           <Card.Body>
-            <Card.Title>{item.item.name}</Card.Title>
+            <Card.Title>{item.name}</Card.Title>
 
-            <Card.Text>{item.item.price}</Card.Text>
+            <Card.Text>{item.price}</Card.Text>
             <div className="mb-3">
               <StarRatings
                 className="py-3 "
@@ -34,11 +34,11 @@ const CompareCard = ({ item, addTowCard, removeCompareList }) => {
               style={{ height: "100px", overflow: "auto" }}
               className="d-flex align-items-center"
             >
-              <p>{item.item.text}</p>
+              <p>{item.text}</p>
             </div>
 
             <div className="my-3">
-              <Button variant="dark" onClick={() => addTowCard(item.item)}>
+              <Button variant="dark" onClick={() => addTowCard(item)}>
                 {" "}
                 Add to Cart
                 <FontAwesomeIcon
@@ -51,7 +51,7 @@ const CompareCard = ({ item, addTowCard, removeCompareList }) => {
               <span className="ms-2 my-2">
                 <Button
                   variant="dark"
-                  onClick={() => removeCompareList(item.item.id)}
+                  onClick={() => removeCompareList(item.id)}
                 >
                   {" "}
                   Remove Cart

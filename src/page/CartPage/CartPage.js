@@ -14,7 +14,7 @@ const CartPage = () => {
 
   const removeItem = (id) => {
     const removeThenCartItem = cartList.filter(
-      (listItem) => listItem?.item?.id !== id
+      (listItem) => listItem?.id !== id
     );
     setCartList(removeThenCartItem);
     // console.log(removeThenCartItem);
@@ -44,30 +44,30 @@ const CartPage = () => {
             <tbody className="text-center text-justify">
               {cartList.map(
                 (item) =>
-                  item.item && (
-                    <React.Fragment key={item?.item?.id}>
-                      <tr key={item.item.id}>
+                  item && (
+                    <React.Fragment key={item?.id}>
+                      <tr key={item.id}>
                         <th scope="row">
                           <FontAwesomeIcon
                             icon={faTrash}
                             size="lg"
                             className="text-danger pt-4"
-                            onClick={() => removeItem(item.item.id)}
+                            onClick={() => removeItem(item.id)}
                           />
                         </th>
 
                         <td>
                           <img
-                            src={item.item.img}
+                            src={item.img}
                             alt=""
                             style={{ width: "80px", height: "80px" }}
                           />
                         </td>
                         <td>
-                          <p className="mt-4">{item.item.name}</p>
+                          <p className="mt-4">{item.name}</p>
                         </td>
                         <td>
-                          <p className="mt-4">{item.item.price}</p>
+                          <p className="mt-4">{item.price}</p>
                         </td>
                         <td>
                           <input
@@ -77,15 +77,12 @@ const CartPage = () => {
                             defaultValue={1}
                             style={{ width: "50px" }}
                             onChange={(e) =>
-                              handleChangeSinglePost(
-                                e.target.value,
-                                item.item.id
-                              )
+                              handleChangeSinglePost(e.target.value, item.id)
                             }
                           ></input>
                         </td>
                         <td>
-                          <p className="mt-4">{total}</p>
+                          <p className="mt-4">{item.price}</p>
                         </td>
                       </tr>
                     </React.Fragment>

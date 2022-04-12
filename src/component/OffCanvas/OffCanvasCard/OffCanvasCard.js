@@ -9,25 +9,25 @@ const OffCanvasCard = ({ item, removeItem }) => {
   return (
     <div
       className="d-flex gap-3 my-2 align-items-center justify-content-between"
-      key={item.item.id}
+      key={item.id}
     >
       <div className="d-flex gap-3 my-2">
         <div>
           <img
-            src={item.item.img}
+            src={item.img}
             alt=""
             className="img-fluid"
             style={{ width: "50px", height: "50px", border: "none" }}
           />
         </div>
         <Link
-          to={`${item.item.id}`}
+          to={`${item.id}`}
           style={{ textDecoration: "none", color: "gray" }}
           className="linkstyle"
         >
           <div>
-            <h6>{item.item.name}</h6>
-            <p>Price: {item.item.price}</p>
+            <h6>{item.name}</h6>
+            <p>Price: {item.price}</p>
           </div>
         </Link>
       </div>
@@ -35,7 +35,7 @@ const OffCanvasCard = ({ item, removeItem }) => {
       <FontAwesomeIcon
         icon={faTrash}
         size="lg"
-        onClick={() => removeItem(item.item.id)}
+        onClick={() => removeItem(item.id)}
       />
     </div>
   );

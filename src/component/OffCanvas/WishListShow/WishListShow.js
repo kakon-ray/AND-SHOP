@@ -16,9 +16,9 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
 
   const removeItem = (id) => {
     const removeThenCartItem = wishList.filter(
-      (listItem) => listItem?.item?.id !== id
+      (listItem) => listItem?.id !== id
     );
-    setWishList(removeThenCartItem);
+    setWishList([...removeThenCartItem]);
     // console.log(removeThenCartItem);
   };
 
@@ -35,12 +35,8 @@ const WishListShow = ({ handleClosWishLIst, placement, showWishList }) => {
       </Offcanvas.Header>
       <Offcanvas.Body>
         {wishList.map((item) =>
-          item.item ? (
-            <OffCanvasCard
-              item={item}
-              removeItem={removeItem}
-              key={item.item.id}
-            />
+          item ? (
+            <OffCanvasCard item={item} removeItem={removeItem} key={item.id} />
           ) : (
             ""
           )

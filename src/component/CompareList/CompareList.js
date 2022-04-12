@@ -15,10 +15,20 @@ const CompareList = () => {
   const [cartList, setCartList] = useContext(CartContext);
 
   const addTowCard = (item) => {
-    const exist = cartList.find((wishItem) => wishItem.item?.id === item.id);
+    const exist = cartList.find((wishItem) => wishItem?.id === item.id);
 
     if (!exist) {
-      setCartList([...cartList, { item }]);
+      setCartList([
+        ...cartList,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          text: item.text,
+          img: item.img,
+          img2: item.img2,
+        },
+      ]);
       toast.success(" Added in Cartlist");
     } else if (exist) {
       toast.error("Already Added in Cartlist");
@@ -26,10 +36,8 @@ const CompareList = () => {
   };
 
   const removeCompareList = (id) => {
-    const newCompareList = compareList.filter(
-      (comItem) => comItem?.item?.id !== id
-    );
-    setCompareList(newCompareList);
+    const newCompareList = compareList.filter((comItem) => comItem?.id !== id);
+    setCompareList([...newCompareList]);
   };
 
   return (
@@ -37,7 +45,7 @@ const CompareList = () => {
       <div className="row mx-1">
         {compareList.length > 0 ? (
           compareList.map((item) => (
-            <React.Fragment key={item?.item?.id}>
+            <React.Fragment key={item?.id}>
               <CompareCard
                 item={item}
                 addTowCard={addTowCard}
