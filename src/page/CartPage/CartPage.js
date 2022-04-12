@@ -84,7 +84,7 @@ const CartPage = () => {
                             className="mt-4"
                             id="number"
                             type="number"
-                            defaultValue={1}
+                            defaultValue={item.value}
                             min="1"
                             style={{ width: "50px" }}
                             onChange={(e) =>
