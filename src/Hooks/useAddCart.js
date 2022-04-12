@@ -19,6 +19,7 @@ const useAddCart = (item) => {
           text: item.text,
           img: item.img,
           img2: item.img2,
+          value: item.value,
         },
       ]);
       toast.success(" Successfully Added in Cartlist");

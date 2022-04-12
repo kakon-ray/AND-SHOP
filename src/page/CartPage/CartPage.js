@@ -23,9 +23,7 @@ const CartPage = () => {
     // console.log("id>>>", id);
 
     setCartList(
-      cartList.map((item) =>
-        item.id === id ? { ...item, value: value } : item
-      )
+      cartList.map((item) => (item.id === id ? { ...item, value } : item))
     );
   };
 
@@ -34,7 +32,7 @@ const CartPage = () => {
   for (let item of cartList) {
     totalPrice = totalPrice + item.value * item.price;
   }
-  console.log(totalPrice);
+  console.log(cartList);
   return (
     <>
       <PageBanner page="Cart" />
