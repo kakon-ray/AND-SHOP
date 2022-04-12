@@ -22,6 +22,7 @@ const useAddCompareList = (item, productDetailsitem) => {
           text: item.text,
           img: item.img,
           img2: item.img2,
+          value: item.value,
         },
       ]);
       toast.success(" Added in Compare List");

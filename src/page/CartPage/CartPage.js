@@ -23,7 +23,9 @@ const CartPage = () => {
     // console.log("id>>>", id);
 
     setCartList(
-      cartList.map((item) => (item.id === id ? { ...item, value } : item))
+      cartList.map((item) =>
+        item.id === id ? { ...item, value: value } : item
+      )
     );
   };
 
