@@ -29,6 +29,12 @@ const CartPage = () => {
     );
   };
 
+  let totalPrice = 0;
+  let shipping = 5;
+  for (let item of cartList) {
+    totalPrice = totalPrice + item.value * item.price;
+  }
+  console.log(totalPrice);
   return (
     <>
       <PageBanner page="Cart" />
@@ -146,17 +152,19 @@ const CartPage = () => {
                 <div style={{ padding: "15px" }} className="text-secondary">
                   <div className="d-flex justify-content-between py-2">
                     <span>Subtotal</span>
-                    <span>$107.00</span>
+                    <span>${totalPrice}.00</span>
                   </div>
                   <div className="d-flex justify-content-between py-2">
                     <span>Shipping</span>
-                    <span>$00.00</span>
+                    <span>
+                      ${totalPrice > 0 ? shipping : (shipping = 0)}.00
+                    </span>
                   </div>
                   <p className="text-end py-2">Calculate shipping</p>
                   <hr />
                   <div className="d-flex justify-content-between py-2">
                     <span>Total</span>
-                    <span>$107.00</span>
+                    <span>${totalPrice + shipping}.00</span>
                   </div>
                   <div className="d-flex justify-fontent-end py-2">
                     <Button variant="dark pb-2 pt-2 ms-auto">
