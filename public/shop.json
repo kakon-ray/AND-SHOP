@@ -2,8 +2,8 @@
   {
     "id": "1",
     "name": "Green Dress For Woman",
-    "price": "$38.00",
-    "value": 0,
+    "price": "38.00",
+    "value": 1,
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
@@ -11,8 +11,8 @@
       {
         "id": "1",
         "name": "Green Dress For Woman",
-        "price": "$38.00",
-        "value": 0,
+        "price": "38.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -20,8 +20,8 @@
       {
         "id": "2",
         "name": "T-Shirt For Men",
-        "price": "$78.00",
-        "value": 0,
+        "price": "78.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -29,8 +29,8 @@
       {
         "id": "3",
         "name": "V-Neck Dress",
-        "price": "$98.00",
-        "value": 0,
+        "price": "98.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
         "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -38,8 +38,8 @@
       {
         "id": "4",
         "name": "Maxi Dress",
-        "price": "$43.00",
-        "value": 0,
+        "price": "43.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
         "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -47,8 +47,8 @@
       {
         "id": "5",
         "name": "Fit-Flare Dress",
-        "price": "$53.00",
-        "value": 0,
+        "price": "53.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -58,8 +58,8 @@
       {
         "id": "1",
         "name": "Green Dress For Woman",
-        "price": "$38.00",
-        "value": 0,
+        "price": "38.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -67,8 +67,8 @@
       {
         "id": "2",
         "name": "T-Shirt For Men",
-        "price": "$78.00",
-        "value": 0,
+        "price": "78.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -78,8 +78,8 @@
       {
         "id": "3",
         "name": "V-Neck Dress",
-        "price": "$98.00",
-        "value": 0,
+        "price": "98.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
         "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -87,8 +87,8 @@
       {
         "id": "4",
         "name": "Maxi Dress",
-        "price": "$43.00",
-        "value": 0,
+        "price": "43.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
         "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -96,8 +96,8 @@
       {
         "id": "5",
         "name": "Fit-Flare Dress",
-        "price": "$53.00",
-        "value": 0,
+        "price": "53.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -105,8 +105,8 @@
       {
         "id": "6",
         "name": "Easy Dress ",
-        "price": "$57.00",
-        "value": 0,
+        "price": "57.00",
+        "value": 1,
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
         "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
         "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -116,8 +116,8 @@
   {
     "id": "2",
     "name": "T-Shirt For Men",
-    "price": "$78.00",
-    "value": 0,
+    "price": "78.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -126,8 +126,8 @@
   {
     "id": "3",
     "name": "V-Neck Dress",
-    "price": "$98.00",
-    "value": 0,
+    "price": "98.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -135,8 +135,8 @@
   {
     "id": "4",
     "name": "Maxi Dress",
-    "price": "$43.00",
-    "value": 0,
+    "price": "43.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -144,8 +144,8 @@
   {
     "id": "5",
     "name": "Fit-Flare Dress",
-    "price": "$53.00",
-    "value": 0,
+    "price": "53.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -153,8 +153,8 @@
   {
     "id": "6",
     "name": "Easy Dress",
-    "price": "$57.00",
-    "value": 0,
+    "price": "57.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -162,8 +162,8 @@
   {
     "id": "7",
     "name": "V-Neck Dress",
-    "price": "$58.00",
-    "value": 0,
+    "price": "58.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -171,8 +171,8 @@
   {
     "id": "8",
     "name": "Fit-Flare Dress",
-    "price": "$60.00",
-    "value": 0,
+    "price": "60.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -180,8 +180,8 @@
   {
     "id": "9",
     "name": "Flare Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -189,8 +189,8 @@
   {
     "id": "10",
     "name": "Couple Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -199,8 +199,8 @@
   {
     "id": "11",
     "name": "Green Dress For Woman",
-    "price": "$38.00",
-    "value": 0,
+    "price": "38.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -208,8 +208,8 @@
   {
     "id": "12",
     "name": "T-Shirt For Men",
-    "price": "$78.00",
-    "value": 0,
+    "price": "78.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -218,8 +218,8 @@
   {
     "id": "13",
     "name": "V-Neck Dress",
-    "price": "$98.00",
-    "value": 0,
+    "price": "98.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -227,8 +227,8 @@
   {
     "id": "14",
     "name": "Maxi Dress",
-    "price": "$43.00",
-    "value": 0,
+    "price": "43.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -236,8 +236,8 @@
   {
     "id": "15",
     "name": "Fit-Flare Dress",
-    "price": "$53.00",
-    "value": 0,
+    "price": "53.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -245,8 +245,8 @@
   {
     "id": "16",
     "name": "Easy Chair ",
-    "price": "$57.00",
-    "value": 0,
+    "price": "57.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -254,8 +254,8 @@
   {
     "id": "17",
     "name": "V-Neck Dress",
-    "price": "$58.00",
-    "value": 0,
+    "price": "58.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -263,8 +263,8 @@
   {
     "id": "18",
     "name": "Fit-Flare Dress",
-    "price": "$60.00",
-    "value": 0,
+    "price": "60.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -272,8 +272,8 @@
   {
     "id": "19",
     "name": "Flare Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -281,8 +281,8 @@
   {
     "id": "20",
     "name": "Couple Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -290,8 +290,8 @@
   {
     "id": "21",
     "name": "Couple Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -300,8 +300,8 @@
   {
     "id": "22",
     "name": "Green Dress For Woman",
-    "price": "$38.00",
-    "value": 0,
+    "price": "38.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -309,8 +309,8 @@
   {
     "id": "23",
     "name": "T-Shirt For Men",
-    "price": "$78.00",
-    "value": 0,
+    "price": "78.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -319,8 +319,8 @@
   {
     "id": "24",
     "name": "V-Neck Dress",
-    "price": "$98.00",
-    "value": 0,
+    "price": "98.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -328,8 +328,8 @@
   {
     "id": "25",
     "name": "Maxi Dress",
-    "price": "$43.00",
-    "value": 0,
+    "price": "43.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -337,8 +337,8 @@
   {
     "id": "26",
     "name": "Fit-Flare Dress",
-    "price": "$53.00",
-    "value": 0,
+    "price": "53.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -346,8 +346,8 @@
   {
     "id": "27",
     "name": "Easy Chair ",
-    "price": "$57.00",
-    "value": 0,
+    "price": "57.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -355,8 +355,8 @@
   {
     "id": "28",
     "name": "V-Neck Dress",
-    "price": "$58.00",
-    "value": 0,
+    "price": "58.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product7.6533a8ae.png",
     "img2": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png"
@@ -364,8 +364,8 @@
   {
     "id": "29",
     "name": "Fit-Flare Dress",
-    "price": "$60.00",
-    "value": 0,
+    "price": "60.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png",
     "img2": "https://andshop-react.netlify.app/static/media/product1.7190443a.png"
@@ -373,8 +373,8 @@
   {
     "id": "30",
     "name": "Flare Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -382,8 +382,8 @@
   {
     "id": "31",
     "name": "Couple Dress",
-    "price": "$20.00",
-    "value": 0,
+    "price": "20.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product9.60333e3e.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"
@@ -391,8 +391,8 @@
   {
     "id": "32",
     "name": "Fit-Flare Dress",
-    "price": "$53.00",
-    "value": 0,
+    "price": "53.00",
+    "value": 1,
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Sapiente non expedita molestias at eveniet. Cupiditate accusamussoluta iste harum aspernatur?",
     "img": "https://andshop-react.netlify.app/static/media/product10.d71c44ec.png",
     "img2": "https://andshop-react.netlify.app/static/media/product6.f19b14e6.png"

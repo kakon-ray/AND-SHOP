@@ -19,8 +19,14 @@ const CartPage = () => {
   };
 
   const handleChangeSinglePost = (value, id) => {
-    console.log("value>>>", value);
-    console.log("id>>>", id);
+    // console.log("value>>>", value);
+    // console.log("id>>>", id);
+
+    setCartList(
+      cartList.map((item) =>
+        item.id === id ? { ...item, value: value } : item
+      )
+    );
   };
 
   return (
@@ -73,6 +79,7 @@ const CartPage = () => {
                             id="number"
                             type="number"
                             defaultValue={1}
+                            min="1"
                             style={{ width: "50px" }}
                             onChange={(e) =>
                               handleChangeSinglePost(e.target.value, item.id)
@@ -80,7 +87,7 @@ const CartPage = () => {
                           ></input>
                         </td>
                         <td>
-                          <p className="mt-4">{item.price}</p>
+                          <p className="mt-4">${item.price * item.value}.00</p>
                         </td>
                       </tr>
                     </React.Fragment>
