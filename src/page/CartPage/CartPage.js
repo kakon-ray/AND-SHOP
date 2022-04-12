@@ -10,13 +10,11 @@ import Table from "react-bootstrap/col";
 const CartPage = () => {
   const [cartList, setCartList] = useContext(CartContext);
 
-  const total = 5;
-
   const removeItem = (id) => {
     const removeThenCartItem = cartList.filter(
       (listItem) => listItem?.id !== id
     );
-    setCartList(removeThenCartItem);
+    setCartList([...removeThenCartItem]);
     // console.log(removeThenCartItem);
   };
 
