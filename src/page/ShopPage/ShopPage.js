@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import FollowUs from "../../component/FollowUs/FollowUs";
 import PageBanner from "../../component/PageBanner/PageBanner";
 import ShopCard from "../../component/ShopCard.js/ShopCard";

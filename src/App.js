@@ -22,6 +22,8 @@ import CompareList from "./component/CompareList/CompareList";
 import CartPage from "./page/CartPage/CartPage";
 import WishListPage from "./page/WishListPage/WishListPage";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
+import Registation from "./component/LoginRegister/Registation/Registation";
+import Login from "./component/LoginRegister/Login/Login";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             <Route path="compare" element={<CompareList />} />
             <Route path="cart" element={<CartPage />} />
             <Route path="wishlistpage" element={<WishListPage />} />
+            <Route path="registation" element={<Registation />} />
+            <Route path="login" element={<Login />} />
             <Route path="/:id" element={<ProductDetails />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

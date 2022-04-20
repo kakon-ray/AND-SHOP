@@ -6,8 +6,10 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const TopNav = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.topnav}>
       <div className="container-fluid">
@@ -38,6 +40,7 @@ const TopNav = () => {
               <li>
                 <button
                   className="mx-3 my-2 "
+                  onClick={() => navigate("/login")}
                   style={{ padding: "0", border: "none", background: "none" }}
                 >
                   <FontAwesomeIcon icon={faUser} className="me-1" />
@@ -46,6 +49,7 @@ const TopNav = () => {
               </li>
               <li>
                 <button
+                  onClick={() => navigate("/registation")}
                   className="mx-3 my-2 "
                   style={{ padding: "0", border: "none", background: "none" }}
                 >
