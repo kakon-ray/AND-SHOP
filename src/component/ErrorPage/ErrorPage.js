@@ -10,7 +10,7 @@ const ErrorPage = () => {
       <PageBanner page="Error" />
       <div className="text-center">
         <p style={error}>404</p>
-        <h2>We are sorry, the page you've requested is not available</h2>
+        <h2>Sorry, the page you've requested is not available</h2>
       </div>
     </div>
   );
