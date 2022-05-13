@@ -93,3 +93,8 @@
 .overly-content-btn:hover {
   color: #f07a04;
 }
+
+/* card style */
+.card {
+  box-shadow: none !important;
+}
