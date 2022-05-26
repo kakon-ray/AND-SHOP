@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
+import StarRatings from "react-star-ratings/build/star-ratings";
 
 const Review = () => {
+  const [rating, setRating] = useState(5);
+
+  const onStarClick = (nextValue, prevValue) => {
+    setRating(nextValue);
+  };
+
   return (
     <div>
       <Card className="p-2 m-4">
@@ -17,12 +24,25 @@ const Review = () => {
           <Form.Group className="mb-3" controlId="formBasicReviewName">
             <textarea
               name="description"
+              placeholder="Description"
               className="w-100 form-control rounded-0"
               rows="9"
             ></textarea>
           </Form.Group>
 
-          <Button variant="warning" type="submit">
+          <div>
+            <StarRatings
+              rating={rating}
+              starDimension="30px"
+              starRatedColor="#DAA520"
+              changeRating={onStarClick}
+              numberOfStars={6}
+              starHoverColor="#FFD700"
+              name="rating"
+            />
+          </div>
+
+          <Button variant="warning" className="mt-4" type="submit">
             Submit
           </Button>
         </Form>
