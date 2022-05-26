@@ -24,6 +24,10 @@ import WishListPage from "./page/WishListPage/WishListPage";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
 import Registation from "./component/LoginRegister/Registation/Registation";
 import Login from "./component/LoginRegister/Login/Login";
+import Dashboard from "./Dashboard/Dashboard/Dashboard";
+import Profile from "./Dashboard/Profile/Profile";
+import Review from "./Dashboard/Review/Review";
+import Seller from "./Dashboard/SellerPage/Seller";
 
 function App() {
   return (
@@ -43,6 +47,18 @@ function App() {
             <Route path="wishlistpage" element={<WishListPage />} />
             <Route path="registation" element={<Registation />} />
             <Route path="login" element={<Login />} />
+
+            {/* start Dashboard Rout */}
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route index element={<Profile />} />
+              <Route path="myorder" element={<CartPage />} />
+              <Route path="wishlist" element={<WishListPage />} />
+              <Route path="review" element={<Review />} />
+              <Route path="seller" element={<Seller />} />
+            </Route>
+
+            {/* End Dashboard Rout */}
+
             <Route path="/:id" element={<ProductDetails />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

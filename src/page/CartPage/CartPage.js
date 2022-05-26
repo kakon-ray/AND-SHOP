@@ -34,7 +34,7 @@ const CartPage = () => {
   for (let item of cartList) {
     totalPrice = totalPrice + item.value * item.price;
   }
-  console.log(cartList);
+
   return (
     <>
       <PageBanner page="Cart" />
