@@ -83,6 +83,12 @@
 
 /* this media query use toggle navbar section */
 
+@media only screen and (max-width: 375px) {
+  .navbar-shop {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .navbar-brand {
     font-size: 26px;
