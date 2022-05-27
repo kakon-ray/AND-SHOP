@@ -51,7 +51,7 @@ function App() {
             {/* start Dashboard Rout */}
             <Route path="dashboard" element={<Dashboard />}>
               <Route index element={<Profile />} />
-              <Route path="myorder" element={<CartPage />} />
+              <Route path="mycartlist" element={<CartPage />} />
               <Route path="wishlist" element={<WishListPage />} />
               <Route path="review" element={<Review />} />
               <Route path="seller" element={<Seller />} />

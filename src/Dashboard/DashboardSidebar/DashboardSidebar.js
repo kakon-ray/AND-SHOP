@@ -48,9 +48,9 @@ const DashboardSidebar = () => {
               </MenuItem>
             </Menu>
           </Link>
-          <Link to="/dashboard/myorder">
+          <Link to="/dashboard/mycartlist">
             <Menu iconShape="square">
-              <MenuItem icon={<FaList />}>My Order</MenuItem>
+              <MenuItem icon={<FaList />}>My Cartlist</MenuItem>
             </Menu>
           </Link>
           <Link to="/dashboard/wishlist">
