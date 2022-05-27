@@ -55,6 +55,7 @@ function App() {
               <Route path="wishlist" element={<WishListPage />} />
               <Route path="review" element={<Review />} />
               <Route path="seller" element={<Seller />} />
+              <Route path="comparelist" element={<CompareList />} />
             </Route>
 
             {/* End Dashboard Rout */}
